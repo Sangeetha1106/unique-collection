@@ -1,0 +1,764 @@
+/* ==========================================================================
+   UNIQUE COLLECTION - Comprehensive Responsive Stylesheet
+   Breakpoints:
+   - Desktops & Laptops: >= 1024px
+   - Tablets & Small Laptops: 768px - 1023px
+   - Mobile Landscape & Phablets: 576px - 767px
+   - Mobile Portrait: < 576px
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Medium Screens / Laptops (under 1199px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1199px) {
+  .nav-list {
+    gap: 18px;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+  }
+
+  .hero-title {
+    font-size: 2.85rem;
+  }
+
+  .promo-content h2 {
+    font-size: 2.4rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1.2fr 1fr 1fr 1.1fr;
+    gap: 30px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Tablets & Small Laptops (under 1023px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1023px) {
+  /* Show hamburger menu, hide desktop nav */
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .header-inner {
+    height: 70px;
+  }
+
+  .header-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .brand-title {
+    font-size: 1.45rem;
+  }
+
+  /* Hero Section Stacking */
+  .hero-section {
+    padding: 48px 0 56px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-badge-pill {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-features {
+    justify-content: center;
+  }
+
+  .hero-floating-tag {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .hero-main-card {
+    max-width: 380px;
+  }
+
+  /* Grids */
+  .category-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .category-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-img-wrap {
+    height: 200px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .product-media {
+    height: 240px;
+  }
+
+  .wishlist-media-wrap {
+    height: 240px;
+  }
+
+  .promo-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .promo-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promo-image-box {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .instagram-grid .insta-card:nth-child(4),
+  .instagram-grid .insta-card:nth-child(5) {
+    display: none;
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+
+  .quick-view-card {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-view-media img {
+    max-height: 280px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Small Tablets & Phablets (under 767px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .announcement-bar {
+    font-size: 0.75rem;
+    padding: 7px 12px;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-padding {
+    padding: 52px 0;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .category-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .category-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .category-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .category-img-wrap {
+    height: 180px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .product-media {
+    height: 200px;
+  }
+
+  .wishlist-media-wrap {
+    height: 200px;
+  }
+
+  .product-content {
+    padding: 14px 10px 16px;
+  }
+
+  .product-name {
+    font-size: 0.95rem;
+  }
+
+  .price-current {
+    font-size: 1.05rem;
+  }
+
+  .btn-add-cart {
+    padding: 9px 12px;
+    font-size: 0.78rem;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+
+  /* Full Banner Mobile Adaptations */
+  .hero-mobile-cta-bar {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hero-banner-hotspots {
+    display: none;
+  }
+
+  .hero-ribbon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 4px 10px;
+  }
+
+  .ribbon-item {
+    font-size: 0.76rem;
+    justify-content: flex-start;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Mobile Portrait (under 575px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 575px) {
+  .header-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .brand-title {
+    font-size: 1.25rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.58rem;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .action-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .action-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hero-title {
+    font-size: 1.95rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hero-floating-tag {
+    display: none;
+  }
+
+  .category-name {
+    font-size: 0.92rem;
+  }
+
+  .promo-content h2 {
+    font-size: 1.95rem;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instagram-grid .insta-card:nth-child(3) {
+    display: none;
+  }
+
+  .toast-container {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .toast {
+    max-width: 100%;
+  }
+
+  /* Shop & Category Mobile Adjustments */
+  .page-hero-banner {
+    padding: 32px 0 36px;
+  }
+
+  .page-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .page-hero-desc {
+    font-size: 0.9rem;
+  }
+
+  .shop-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .toolbar-actions {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .sort-dropdown-wrap {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .sort-select {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .product-card-actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .product-media {
+    height: 170px;
+  }
+
+  .product-media img {
+    padding: 6px;
+  }
+
+  .wishlist-media-wrap {
+    height: 170px;
+  }
+
+  .wishlist-img {
+    padding: 6px;
+  }
+
+  .btn-view-card {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Clean Catalog Navigation & Product Grid (Wild Wolven Reference)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1023px) {
+  .catalog-section {
+    padding: 20px 0 60px;
+  }
+
+  .category-nav-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .category-nav-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    gap: 8px;
+  }
+
+  .category-pill-btn {
+    flex-shrink: 0;
+  }
+
+  .category-nav-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .catalog-search-wrap {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .catalog-sort-wrap {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .sort-select {
+    flex: 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Step 4: Product Details & Shopping Cart Responsive Adaptations
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1023px) {
+  .product-details-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .product-gallery-pane {
+    position: static;
+    max-width: 100%;
+  }
+
+  .gallery-main-stage {
+    max-height: 380px;
+    height: 380px;
+  }
+
+  .cart-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .order-summary-card {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .product-page-title {
+    font-size: 1.6rem;
+  }
+
+  .gallery-main-stage {
+    max-height: 320px;
+    height: 320px;
+  }
+
+  .gallery-main-img {
+    padding: 8px;
+  }
+
+  .detail-current-price {
+    font-size: 1.85rem;
+  }
+
+  .cart-page-title {
+    font-size: 1.7rem;
+  }
+
+  .product-actions-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btn-add-to-cart,
+  .btn-buy-now {
+    width: 100%;
+    height: 50px;
+  }
+
+  .btn-wishlist-toggle {
+    width: 100%;
+    height: 46px;
+    gap: 8px;
+  }
+
+  .gallery-trust-strip {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .thumbnail-item {
+    width: 60px;
+    height: 68px;
+  }
+
+  /* Cart Mobile Card Transformation */
+  .cart-items-table-header {
+    display: none;
+  }
+
+  .cart-items-column {
+    padding: 16px;
+  }
+
+  .cart-item-row {
+    grid-template-columns: 76px 1fr 36px;
+    grid-template-rows: auto auto auto;
+    gap: 12px;
+    padding: 16px 0;
+    align-items: start;
+    position: relative;
+  }
+
+  .cart-item-media {
+    grid-row: 1 / 4;
+  }
+
+  .cart-item-info {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .cart-item-unit-price {
+    display: none;
+  }
+
+  .cart-item-mobile-price {
+    display: block;
+  }
+
+  .cart-item-quantity-ctrl {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin-top: 4px;
+  }
+
+  .cart-item-line-total {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    margin-top: 4px;
+    font-size: 1.05rem;
+  }
+
+  .cart-item-remove-cell {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .cart-actions-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery-main-stage {
+    max-height: 280px;
+    height: 270px;
+  }
+
+  .thumbnail-item {
+    width: 52px;
+    height: 60px;
+  }
+
+  .product-breadcrumbs {
+    font-size: 0.76rem;
+  }
+
+  .product-nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .quantity-stepper-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .spec-table th,
+  .spec-table td {
+    display: block;
+    width: 100%;
+    padding: 4px 0;
+  }
+
+  .spec-table tr {
+    margin-bottom: 12px;
+    display: block;
+    border-bottom: 1px dashed var(--color-border-light);
+    padding-bottom: 8px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Step 5: Checkout & Order Confirmation Responsive Adaptations
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1023px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .checkout-summary-column .order-summary-card {
+    position: static;
+  }
+
+  .confirmation-details-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .checkout-section-box {
+    padding: 20px 16px;
+  }
+
+  .form-row-2,
+  .form-row-3 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .payment-method-selector {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .checkout-summary-column {
+    padding: 20px 16px;
+  }
+
+  .confirmation-card {
+    padding: 24px 16px;
+  }
+
+  .confirmation-title {
+    font-size: 1.8rem;
+  }
+
+  .order-history-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .order-history-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .order-history-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .checkout-trust-badges {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .confirmation-action-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .confirmation-action-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+

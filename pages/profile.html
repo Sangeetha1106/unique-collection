@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your UNIQUE COLLECTION personal profile, contact information, and view your order history.">
+    <title>My Profile | UNIQUE COLLECTION</title>
+
+    <!-- Google Fonts: Playfair Display & Jost -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- Deferred JavaScript Modules -->
+    <script src="../js/products.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+    <script src="../js/main.js" defer></script>
+</head>
+<body class="page-profile">
+
+    <!-- 1. Top Announcement Bar -->
+    <div class="announcement-bar" role="region" aria-label="Announcement">
+        <div class="container">
+            <div class="announcement-content">
+                <span class="announcement-sparkle">✦</span>
+                <span class="announcement-badge">Customer Account</span>
+                <span>MANAGE YOUR PROFILE &amp; ACCOUNT PREFERENCES</span>
+                <span class="announcement-sparkle">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Site Header & Primary Navigation -->
+    <header class="site-header" id="site-header">
+        <div class="header-container">
+            <div class="header-inner">
+                
+                <!-- Mobile Navigation Toggle -->
+                <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open mobile navigation menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+                <!-- Brand Logo (Client official logo) -->
+                <a href="../index.html" class="brand-logo" aria-label="UNIQUE COLLECTION Home">
+                    <img src="../assets/logo/logo.png" alt="UNIQUE COLLECTION - Fashion • Jewellery • You" class="brand-logo-img">
+                </a>
+
+                <!-- Desktop Primary Navigation -->
+                <nav class="main-nav" aria-label="Main Navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop.html" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="category.html?cat=clothing" class="nav-link">Clothing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="category.html?cat=jewellery" class="nav-link">Jewellery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop.html?filter=offers" class="nav-link" style="color: var(--color-gold); font-weight: 600;">Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <button type="button" class="action-btn" id="search-toggle-btn" aria-label="Search catalog">
+                        <svg class="action-icon" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+
+                    <a href="profile.html" class="action-btn active" aria-label="Customer Profile">
+                        <svg class="action-icon" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+
+                    <a href="wishlist.html" class="action-btn" aria-label="View Wishlist">
+                        <svg class="action-icon" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                        </svg>
+                        <span class="badge-count wishlist-count-badge">0</span>
+                    </a>
+
+                    <a href="cart.html" class="action-btn" aria-label="View Shopping Bag">
+                        <svg class="action-icon" viewBox="0 0 24 24">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <span class="badge-count cart-count-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Bar Overlay -->
+        <div class="search-overlay" id="search-overlay">
+            <div class="container">
+                <form class="search-form-inner" id="header-search-form">
+                    <input type="text" class="search-input-field" id="header-search-input" placeholder="Search products..." aria-label="Search catalog">
+                    <button type="submit" class="search-submit-btn">
+                        <span>Search</span>
+                    </button>
+                    <button type="button" class="search-close-btn" id="search-close-btn" aria-label="Close search">✕</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer-overlay" id="mobile-drawer-overlay">
+        <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+            <div class="drawer-header">
+                <a href="../index.html" class="brand-logo" aria-label="UNIQUE COLLECTION Home">
+                    <img src="../assets/logo/logo.png" alt="UNIQUE COLLECTION - Fashion • Jewellery • You" class="brand-logo-img" style="height: 38px;">
+                </a>
+                <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">✕</button>
+            </div>
+            <div class="drawer-content">
+                <ul class="mobile-menu-list">
+                    <li class="mobile-menu-item"><a href="../index.html" class="mobile-menu-link">Home</a></li>
+                    <li class="mobile-menu-item"><a href="shop.html" class="mobile-menu-link">Shop All Collections</a></li>
+                    <li class="mobile-menu-item"><a href="category.html?cat=clothing" class="mobile-menu-link">Women's Clothing</a></li>
+                    <li class="mobile-menu-item"><a href="category.html?cat=jewellery" class="mobile-menu-link">Jewellery Collection</a></li>
+                    <li class="mobile-menu-item"><a href="wishlist.html" class="mobile-menu-link">My Wishlist</a></li>
+                    <li class="mobile-menu-item"><a href="cart.html" class="mobile-menu-link">My Shopping Bag</a></li>
+                    <li class="mobile-menu-item"><a href="profile.html" class="mobile-menu-link active">My Profile</a></li>
+                    <li class="mobile-menu-item"><a href="about.html" class="mobile-menu-link">About Us</a></li>
+                    <li class="mobile-menu-item"><a href="contact.html" class="mobile-menu-link">Contact Us</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+
+        <!-- Breadcrumb Bar -->
+        <div class="product-nav-bar">
+            <div class="container">
+                <div class="product-nav-inner">
+                    <a href="shop.html" class="btn-back-shop">
+                        <span class="back-arrow">←</span> Return to Shop
+                    </a>
+                    <nav class="product-breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Home</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="breadcrumb-current">My Profile</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <section class="profile-section">
+            <div class="container">
+
+                <div class="profile-layout" id="profile-layout-root">
+
+                    <!-- Left Column: Personal Information & Delivery Address -->
+                    <div class="profile-main-card">
+                        
+                        <!-- Hero / Avatar Header -->
+                        <div class="profile-hero">
+                            <div class="profile-avatar-circle" id="profile-avatar-initials">
+                                U
+                            </div>
+                            <div class="profile-hero-info">
+                                <h2 id="profile-display-name">Customer</h2>
+                                <p id="profile-display-email">customer@domain.com</p>
+                                <span class="profile-badge-demo">
+                                    <span>✦</span> Verified Member
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Editable Form -->
+                        <form id="profile-edit-form" novalidate>
+                            <h3 class="profile-card-title">
+                                <span>👤</span> Personal Information
+                            </h3>
+
+                            <div class="profile-form-grid">
+                                
+                                <!-- Full Name -->
+                                <div class="form-group">
+                                    <label for="profile-name">
+                                        <span>Full Name <span class="req-star">*</span></span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="profile-name" 
+                                        name="fullName" 
+                                        placeholder="Enter your full name"
+                                        autocomplete="name"
+                                        required
+                                    >
+                                    <div class="field-error" id="error-profile-name"></div>
+                                </div>
+
+                                <!-- Mobile Number with +91 Prefix -->
+                                <div class="form-group">
+                                    <label for="profile-mobile">
+                                        <span>Mobile Number <span class="req-star">*</span></span>
+                                    </label>
+                                    <div class="input-mobile-group">
+                                        <span class="country-code-badge">🇮🇳 +91</span>
+                                        <input 
+                                            type="tel" 
+                                            id="profile-mobile" 
+                                            name="mobile" 
+                                            placeholder="10-digit mobile number"
+                                            maxlength="10"
+                                            autocomplete="tel"
+                                            required
+                                        >
+                                    </div>
+                                    <div class="field-error" id="error-profile-mobile"></div>
+                                </div>
+
+                                <!-- Email (Read-Only) -->
+                                <div class="form-group form-group-full">
+                                    <label for="profile-email">
+                                        <span>Email Address</span>
+                                        <span class="profile-readonly-badge">🔒 Account ID · Cannot be modified</span>
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="profile-email" 
+                                        name="email" 
+                                        readonly 
+                                        aria-readonly="true"
+                                    >
+                                </div>
+
+                            </div>
+
+                            <div class="profile-actions-bar">
+                                <button type="submit" class="btn-save-profile" id="btn-save-profile">
+                                    <span>💾</span> Save Profile Changes
+                                </button>
+                                <div class="profile-save-feedback-box" id="profile-save-feedback">
+                                    <span>✓</span> Profile updated successfully!
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <!-- Default Delivery Address Summary Box -->
+                        <div class="profile-address-preview-box" id="profile-address-box">
+                            <div class="profile-address-preview-header">
+                                <h4 class="profile-address-preview-title">
+                                    <span>📍</span> Default Delivery Address
+                                </h4>
+                                <a href="checkout.html" class="btn-outline-gold" style="font-size: 0.8rem; padding: 5px 14px; border-radius: 4px; text-decoration: none; border: 1px solid var(--color-primary); color: var(--color-primary); font-weight: 600;">
+                                    Manage at Checkout →
+                                </a>
+                            </div>
+                            <div class="profile-address-body" id="profile-address-content">
+                                <p style="color: var(--color-text-muted); margin: 0; font-size: 0.9rem;">
+                                    Loading saved address...
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: Navigation, Stats & Logout -->
+                    <div class="profile-sidebar">
+                        
+                        <!-- Account Activity Card -->
+                        <div class="profile-widget-card">
+                            <h3 class="profile-widget-title">
+                                <span>📊</span> Account Activity
+                            </h3>
+                            <div class="profile-quick-stats">
+                                <a href="my-orders.html" class="stat-tile" title="View Order History">
+                                    <span class="stat-tile-num" id="stat-order-count">0</span>
+                                    <span class="stat-tile-label">Orders</span>
+                                </a>
+                                <a href="cart.html" class="stat-tile" title="View Shopping Bag">
+                                    <span class="stat-tile-num" id="stat-cart-count">0</span>
+                                    <span class="stat-tile-label">In Bag</span>
+                                </a>
+                                <a href="wishlist.html" class="stat-tile" title="View Saved Wishlist">
+                                    <span class="stat-tile-num" id="stat-wishlist-count">0</span>
+                                    <span class="stat-tile-label">Wishlist</span>
+                                </a>
+                            </div>
+
+                            <ul class="profile-menu-links">
+                                <li>
+                                    <a href="my-orders.html">
+                                        <div class="profile-menu-item-left">
+                                            <span class="profile-menu-item-icon">📦</span>
+                                            <span>My Orders &amp; Invoices</span>
+                                        </div>
+                                        <span class="profile-menu-arrow">→</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="wishlist.html">
+                                        <div class="profile-menu-item-left">
+                                            <span class="profile-menu-item-icon">♡</span>
+                                            <span>My Saved Wishlist</span>
+                                        </div>
+                                        <span class="profile-menu-arrow">→</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="cart.html">
+                                        <div class="profile-menu-item-left">
+                                            <span class="profile-menu-item-icon">🛒</span>
+                                            <span>Review Shopping Bag</span>
+                                        </div>
+                                        <span class="profile-menu-arrow">→</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="shop.html">
+                                        <div class="profile-menu-item-left">
+                                            <span class="profile-menu-item-icon">✨</span>
+                                            <span>Explore All Collections</span>
+                                        </div>
+                                        <span class="profile-menu-arrow">→</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Session Control Card -->
+                        <div class="profile-widget-card">
+                            <h3 class="profile-widget-title">
+                                <span>🔐</span> Security &amp; Session
+                            </h3>
+                            <p style="font-size: 0.86rem; color: var(--color-text-muted); margin-bottom: 16px; line-height: 1.5;">
+                                Signed in securely on this browser. Logging out will safely end your active session on this device.
+                            </p>
+                            <button type="button" class="btn-profile-logout" id="btn-profile-logout">
+                                <span>🚪</span> Log Out
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Professional Footer -->
+    <footer class="site-footer" id="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="brand-logo" style="margin-bottom: 16px; display: inline-block; padding: 0;">
+                        <img src="../assets/logo/logo-light.png" alt="UNIQUE COLLECTION - Fashion • Jewellery • You" class="brand-logo-img" style="height: 50px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));">
+                    </a>
+                    <p>UNIQUE COLLECTION brings you authentic Indian ethnic fashion and contemporary anti-tarnish jewellery, celebrating feminine beauty and timeless craftsmanship.</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html">Shop All</a></li>
+                        <li><a href="category.html?cat=clothing">Clothing</a></li>
+                        <li><a href="category.html?cat=jewellery">Jewellery</a></li>
+                        <li><a href="cart.html">Shopping Bag</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Customer Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="login.html">Account Login</a></li>
+                        <li><a href="register.html">Register New Account</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="my-orders.html">Track Orders</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Client Support</h4>
+                    <ul class="footer-contact-info">
+                        <li><span class="footer-contact-icon">✉</span><a href="mailto:Syedalifathima3232@gmail.com">Syedalifathima3232@gmail.com</a></li>
+                        <li><span class="footer-contact-icon">✆</span><a href="tel:994160263">99416 0263</a></li>
+                        <li><span class="footer-contact-icon">✆</span><a href="tel:9962602630">99626 02630</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 UNIQUE COLLECTION. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+</body>
+</html>

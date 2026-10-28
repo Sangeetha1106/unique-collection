@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your order history, delivery details, and receipts at UNIQUE COLLECTION.">
+    <title>My Orders | UNIQUE COLLECTION</title>
+
+    <!-- Google Fonts: Playfair Display & Jost -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- Deferred JavaScript Modules -->
+    <script src="../js/products.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+    <script src="../js/main.js" defer></script>
+</head>
+<body class="page-my-orders">
+
+    <!-- 1. Top Announcement Bar -->
+    <div class="announcement-bar" role="region" aria-label="Announcement">
+        <div class="container">
+            <div class="announcement-content">
+                <span class="announcement-sparkle">✦</span>
+                <span class="announcement-badge">Order History</span>
+                <span>TRACK YOUR ORDERS &amp; SHIPMENTS</span>
+                <span class="announcement-sparkle">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Site Header & Primary Navigation -->
+    <header class="site-header" id="site-header">
+        <div class="header-container">
+            <div class="header-inner">
+                
+                <!-- Mobile Navigation Toggle -->
+                <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open mobile navigation menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+                <!-- Brand Logo (Client official logo) -->
+                <a href="../index.html" class="brand-logo" aria-label="UNIQUE COLLECTION Home">
+                    <img src="../assets/logo/logo.png" alt="UNIQUE COLLECTION - Fashion • Jewellery • You" class="brand-logo-img">
+                </a>
+
+                <!-- Desktop Primary Navigation -->
+                <nav class="main-nav" aria-label="Main Navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop.html" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="category.html?cat=clothing" class="nav-link">Clothing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="category.html?cat=jewellery" class="nav-link">Jewellery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop.html?filter=offers" class="nav-link" style="color: var(--color-gold); font-weight: 600;">Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <button type="button" class="action-btn" id="search-toggle-btn" aria-label="Search catalog">
+                        <svg class="action-icon" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+
+                    <a href="wishlist.html" class="action-btn" aria-label="View Wishlist">
+                        <svg class="action-icon" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                        </svg>
+                        <span class="badge-count wishlist-count-badge">0</span>
+                    </a>
+
+                    <a href="cart.html" class="action-btn" aria-label="View Shopping Bag">
+                        <svg class="action-icon" viewBox="0 0 24 24">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <span class="badge-count cart-count-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Bar Overlay -->
+        <div class="search-overlay" id="search-overlay">
+            <div class="container">
+                <form class="search-form-inner" id="header-search-form">
+                    <input type="text" class="search-input-field" id="header-search-input" placeholder="Search products..." aria-label="Search catalog">
+                    <button type="submit" class="search-submit-btn">
+                        <span>Search</span>
+                    </button>
+                    <button type="button" class="search-close-btn" id="search-close-btn" aria-label="Close search">✕</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-overlay" id="mobile-drawer-overlay">
+        <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+            <div class="drawer-header">
+                <a href="../index.html" class="brand-logo" aria-label="UNIQUE COLLECTION Home">
+                    <img src="../assets/logo/logo.png" alt="UNIQUE COLLECTION - Fashion • Jewellery • You" class="brand-logo-img" style="height: 38px;">
+                </a>
+                <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">✕</button>
+            </div>
+            <div class="drawer-content">
+                <ul class="mobile-menu-list">
+                    <li class="mobile-menu-item"><a href="../index.html" class="mobile-menu-link">Home</a></li>
+                    <li class="mobile-menu-item"><a href="shop.html" class="mobile-menu-link">Shop All Collections</a></li>
+                    <li class="mobile-menu-item"><a href="category.html?cat=clothing" class="mobile-menu-link">Women's Clothing</a></li>
+                    <li class="mobile-menu-item"><a href="category.html?cat=jewellery" class="mobile-menu-link">Jewellery Collection</a></li>
+                    <li class="mobile-menu-item"><a href="cart.html" class="mobile-menu-link">My Shopping Bag</a></li>
+                    <li class="mobile-menu-item"><a href="about.html" class="mobile-menu-link">About Us</a></li>
+                    <li class="mobile-menu-item"><a href="contact.html" class="mobile-menu-link">Contact Us</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+
+        <!-- Breadcrumb Bar -->
+        <div class="product-nav-bar">
+            <div class="container">
+                <div class="product-nav-inner">
+                    <a href="shop.html" class="btn-back-shop">
+                        <span class="back-arrow">←</span> Back to Shop
+                    </a>
+                    <nav class="product-breadcrumbs" aria-label="Breadcrumb">
+                        <a href="../index.html">Home</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="breadcrumb-current">My Orders</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-padding my-orders-section">
+            <div class="container">
+                
+                <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+                    <span class="section-eyebrow">Purchase History</span>
+                    <h1 class="checkout-page-title">My Orders</h1>
+                    <p class="section-desc" style="margin-left: 0;">Review your past orders, delivery status, and invoices.</p>
+                </div>
+
+                <!-- Dynamic Orders Container -->
+                <div id="my-orders-root">
+                    <div style="text-align: center; padding: 60px 20px;">
+                        <p style="color: var(--color-text-muted);">Loading your order history...</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Toast Notifications Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <!-- Professional Footer -->
+    <footer class="site-footer" id="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="brand-logo" style="margin-bottom: 16px; display: inline-block; padding: 0;">
+                        <img src="../assets/logo/logo-light.png" alt="UNIQUE COLLECTION - Fashion • Jewellery • You" class="brand-logo-img" style="height: 50px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));">
+                    </a>
+                    <p>UNIQUE COLLECTION brings you authentic Indian ethnic fashion and contemporary anti-tarnish jewellery, celebrating feminine beauty and timeless craftsmanship.</p>
+                    <h4 class="footer-heading" style="margin-top: 24px; font-size: 1rem;">Client Contact Details</h4>
+                    <ul class="footer-contact-info">
+                        <li><span class="footer-contact-icon">✉</span><a href="mailto:Syedalifathima3232@gmail.com">Syedalifathima3232@gmail.com</a></li>
+                        <li><span class="footer-contact-icon">✆</span><a href="tel:994160263">99416 0263</a></li>
+                        <li><span class="footer-contact-icon">✆</span><a href="tel:9962602630">99626 02630</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Shop Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="category.html?cat=2-piece-churidar-sets">2-Piece Churidar Sets</a></li>
+                        <li><a href="category.html?cat=3-piece-churidar-sets">3-Piece Churidar Sets</a></li>
+                        <li><a href="category.html?cat=designer-lehengas">Designer Lehengas</a></li>
+                        <li><a href="category.html?cat=trendy-sharara-sets">Trendy Sharara Sets</a></li>
+                        <li><a href="category.html?cat=cotton-leggings">Cotton Leggings</a></li>
+                        <li><a href="category.html?cat=womens-innerwear-panties">Innerwear &amp; Panties</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Fine Jewellery</h4>
+                    <ul class="footer-links">
+                        <li><a href="category.html?cat=bracelets-kadas">Bracelets &amp; Kadas</a></li>
+                        <li><a href="category.html?cat=trendy-earrings-rings">Trendy Earrings &amp; Rings</a></li>
+                        <li><a href="category.html?cat=stylish-anklets-kolusu">Anklets &amp; Kolusu</a></li>
+                        <li><a href="category.html?cat=fancy-bangles">Fancy Bangles</a></li>
+                        <li><a href="category.html?cat=guaranteed-earrings-studs">Guaranteed Studs</a></li>
+                        <li><a href="category.html?cat=gold-plated-chains">Gold-Plated Chains</a></li>
+                        <li><a href="category.html?cat=premium-covering-bangles">Covering Bangles</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Customer Care</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About UNIQUE COLLECTION</a></li>
+                        <li><a href="contact.html">Customer Support</a></li>
+                        <li><a href="my-orders.html">Track Order Status</a></li>
+                        <li><a href="wishlist.html">My Wishlist</a></li>
+                        <li><a href="cart.html">Shopping Bag</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>
+                    <p>&copy; 2026 UNIQUE COLLECTION. All Rights Reserved. Crafted with elegance for Indian women.</p>
+                </div>
+                <div class="footer-payments-pill">
+                    <span class="payment-tag">UPI</span>
+                    <span class="payment-tag">RuPay</span>
+                    <span class="payment-tag">Visa</span>
+                    <span class="payment-tag">Mastercard</span>
+                    <span class="payment-tag">Net Banking</span>
+                    <span class="payment-tag">Cash on Delivery</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

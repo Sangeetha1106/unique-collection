@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop women's Indian ethnic wear, waterproof anti-tarnish jewellery, and gold-plated accessories at UNIQUE COLLECTION. Browse churidar sets, lehengas, kadas, bangles and chains.">
+    <title>Shop All Collections | UNIQUE COLLECTION</title>
+
+    <!-- Google Fonts: Playfair Display & Jost -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- Deferred JavaScript Modules -->
+    <script src="../js/products.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- 1. Top Announcement Bar -->
+    <div class="announcement-bar" role="region" aria-label="Announcement">
+        <div class="container">
+            <div class="announcement-content">
+                <span class="announcement-sparkle">✦</span>
+                <span class="announcement-badge">Special Offer</span>
+                <span>CELEBRATE YOUR STYLE — SAVE 10% TO 50% ON SELECTED COLLECTIONS</span>
+                <span class="announcement-sparkle">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Site Header & Primary Navigation -->
+    <header class="site-header" id="site-header">
+        <div class="header-container">
+            <div class="header-inner">
+                
+                <!-- Mobile Navigation Toggle -->
+                <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open mobile navigation menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+                <!-- Brand Logo (Client official logo) -->
+                <a href="../index.html" class="brand-logo" aria-label="UNIQUE COLLECTION Home">
+                    <img src="../assets/logo/logo.png" alt="UNIQUE COLLECTION - Fashion • Jewellery • You" class="brand-logo-img">
+                </a>
+
+                <!-- Desktop Primary Navigation -->
+                <nav class="main-nav" aria-label="Main Navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop.html" class="nav-link active">Shop</a>
+                        </li>
+
+                        <!-- Women's Clothing Mega Menu -->
+                        <li class="nav-item">
+                            <a href="category.html?cat=clothing" class="nav-link">
+                                Clothing <span class="dropdown-chevron">▼</span>
+                            </a>
+                            <div class="nav-dropdown dropdown-mega">
+                                <div>
+                                    <h4 class="dropdown-col-title">Ethnic &amp; Occasion Wear</h4>
+                                    <ul class="dropdown-menu-list">
+                                        <li><a href="category.html?cat=2-piece-churidar-sets">2-Piece Churidar Sets <span class="dropdown-badge">Classic</span></a></li>
+                                        <li><a href="category.html?cat=3-piece-churidar-sets">3-Piece Churidar Sets <span class="dropdown-badge">Festive</span></a></li>
+                                        <li><a href="category.html?cat=designer-lehengas">Designer Lehengas <span class="dropdown-badge">Bridal</span></a></li>
+                                        <li><a href="category.html?cat=trendy-sharara-sets">Trendy Sharara Sets <span class="dropdown-badge">Hot</span></a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="dropdown-col-title">Comfort Essentials</h4>
+                                    <ul class="dropdown-menu-list">
+                                        <li><a href="category.html?cat=cotton-leggings">Cotton Leggings</a></li>
+                                        <li><a href="category.html?cat=womens-innerwear-panties">Women's Innerwear &amp; Panties</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Jewellery Mega Menu -->
+                        <li class="nav-item">
+                            <a href="category.html?cat=jewellery" class="nav-link">
+                                Jewellery <span class="dropdown-chevron">▼</span>
+                            </a>
+                            <div class="nav-dropdown dropdown-mega">
+                                <div>
+                                    <h4 class="dropdown-col-title">Anti-Tarnish Jewellery</h4>
+                                    <ul class="dropdown-menu-list">
+                                        <li><a href="category.html?cat=bracelets-kadas">Bracelets &amp; Kadas <span class="dropdown-badge">Waterproof</span></a></li>
+                                        <li><a href="category.html?cat=trendy-earrings-rings">Trendy Earrings &amp; Rings</a></li>
+                                        <li><a href="category.html?cat=stylish-anklets-kolusu">Anklets &amp; Kolusu</a></li>
+                                        <li><a href="category.html?cat=fancy-bangles">Fancy Bangles</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="dropdown-col-title">Gold-Plated &amp; Covering</h4>
+                                    <ul class="dropdown-menu-list">
+                                        <li><a href="category.html?cat=guaranteed-earrings-studs">Guaranteed Studs <span class="dropdown-badge">1-Yr Plating</span></a></li>
+                                        <li><a href="category.html?cat=gold-plated-chains">Gold-Plated Chains</a></li>
+                                        <li><a href="category.html?cat=premium-covering-bangles">Covering Bangles</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop.html?filter=offers" class="nav-link text-gold" style="color: var(--color-gold); font-weight: 600;">Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <button type="button" class="action-btn" id="search-toggle-btn" aria-label="Search catalog">
+                        <svg class="action-icon" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+
+                    <a href="login.html" class="action-btn" aria-label="Customer Login">
+                        <svg class="action-icon" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+
+                    <a href="wishlist.html" class="action-btn" aria-label="View Wishlist">
+                        <svg class="action-icon" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                        </svg>
+                        <span class="badge-count wishlist-count-badge">0</span>
+                    </a>
+
+                    <a href="cart.html" class="action-btn" aria-label="View Shopping Bag">
+                        <svg class="action-icon" viewBox="0 0 24 24">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <span class="badge-count cart-count-badge">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Bar Overlay -->
+        <div class="search-overlay" id="search-overlay">
+            <div class="container">
+                <form class="search-form-inner" id="header-search-form">
+                    <input type="text" class="search-input-field" id="header-search-input" placeholder="Search products by name (e.g. silk churidar, tennis bracelet, jhumka, lehenga)..." aria-label="Search catalog">
+                    <button type="submit" class="search-submit-btn">
+                        <span>Search</span>
+                    </button>
+                    <button type="button" class="search-close-btn" id="search-close-btn" aria-label="Close search">✕</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-overlay" id="mobile-drawer-overlay">
+        <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+            <div class="drawer-header">
+                <a href="../index.html" class="brand-logo" aria-label="UNIQUE COLLECTION Home">
+                    <img src="../assets/logo/logo.png" alt="UNIQUE COLLECTION - Fashion • Jewellery • You" class="brand-logo-img" style="height: 38px;">
+                </a>
+                <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu">✕</button>
+            </div>
+            
+            <div class="drawer-content">
+                <ul class="mobile-menu-list">
+                    <li class="mobile-menu-item"><a href="../index.html" class="mobile-menu-link">Home</a></li>
+                    <li class="mobile-menu-item"><a href="shop.html" class="mobile-menu-link active">Shop All Collections</a></li>
+
+                    <li class="mobile-menu-item">
+                        <a href="#" class="mobile-menu-link mobile-accordion-toggle" data-target="sub-clothing-mobile">
+                            Women's Clothing <span class="mobile-chevron">▼</span>
+                        </a>
+                        <ul class="mobile-sub-menu" id="sub-clothing-mobile">
+                            <li><a href="category.html?cat=2-piece-churidar-sets">2-Piece Churidar Sets</a></li>
+                            <li><a href="category.html?cat=3-piece-churidar-sets">3-Piece Churidar Sets</a></li>
+                            <li><a href="category.html?cat=designer-lehengas">Designer Lehengas</a></li>
+                            <li><a href="category.html?cat=cotton-leggings">Cotton Leggings</a></li>
+                            <li><a href="category.html?cat=trendy-sharara-sets">Trendy Sharara Sets</a></li>
+                            <li><a href="category.html?cat=womens-innerwear-panties">Women's Innerwear &amp; Panties</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="mobile-menu-item">
+                        <a href="#" class="mobile-menu-link mobile-accordion-toggle" data-target="sub-jewellery-mobile">
+                            Jewellery Collections <span class="mobile-chevron">▼</span>
+                        </a>
+                        <ul class="mobile-sub-menu" id="sub-jewellery-mobile">
+                            <li><strong>Anti-Tarnish Jewellery</strong></li>
+                            <li><a href="category.html?cat=bracelets-kadas">Bracelets &amp; Kadas</a></li>
+                            <li><a href="category.html?cat=trendy-earrings-rings">Trendy Earrings &amp; Rings</a></li>
+                            <li><a href="category.html?cat=stylish-anklets-kolusu">Stylish Anklets &amp; Kolusu</a></li>
+                            <li><a href="category.html?cat=fancy-bangles">Fancy Bangles</a></li>
+                            <li style="margin-top: 8px;"><strong>Gold-Plated &amp; Covering</strong></li>
+                            <li><a href="category.html?cat=guaranteed-earrings-studs">Guaranteed Studs</a></li>
+                            <li><a href="category.html?cat=gold-plated-chains">Gold-Plated Chains</a></li>
+                            <li><a href="category.html?cat=premium-covering-bangles">Covering Bangles</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="mobile-menu-item"><a href="wishlist.html" class="mobile-menu-link">My Wishlist</a></li>
+                    <li class="mobile-menu-item"><a href="cart.html" class="mobile-menu-link">Shopping Bag</a></li>
+                    <li class="mobile-menu-item"><a href="login.html" class="mobile-menu-link">Login / Account</a></li>
+                    <li class="mobile-menu-item"><a href="about.html" class="mobile-menu-link">About Us</a></li>
+                    <li class="mobile-menu-item"><a href="contact.html" class="mobile-menu-link">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="drawer-footer">
+                <a href="mailto:Syedalifathima3232@gmail.com"><span>✉</span> Syedalifathima3232@gmail.com</a>
+                <a href="tel:994160263"><span>✆</span> 99416 0263</a>
+                <a href="tel:9962602630"><span>✆</span> 99626 02630</a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-separator">/</li>
+                    <li class="breadcrumb-item active" id="breadcrumb-current-page">Shop All Collections</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Page Hero Banner -->
+        <section class="page-hero-banner">
+            <div class="container">
+                <span class="category-group-badge" id="listing-group-badge">Complete Catalog Edit</span>
+                <h1 class="page-hero-title" id="listing-page-title">Shop All Collections</h1>
+                <p class="page-hero-desc" id="listing-page-desc">
+                    Discover handcrafted ethnic churidars, designer festive lehengas, 100% waterproof anti-tarnish jewellery, and guaranteed gold-plated treasures.
+                </p>
+            </div>
+        </section>
+
+        <!-- Shop Catalog Section (Full Width with Clean Top Category Navigation) -->
+        <section class="catalog-section">
+            <div class="container">
+
+                <!-- 1. Clean Top Category Navigation Row & Controls (Matching Reference Layout) -->
+                <div class="category-nav-controls">
+                    <div class="category-nav-pills" id="top-category-pills">
+                        <!-- Populated dynamically via main.js with ALL + category pills -->
+                    </div>
+
+                    <div class="category-nav-actions">
+                        <div class="catalog-search-wrap">
+                            <span class="catalog-search-icon">🔍</span>
+                            <input type="text" id="catalog-search-input" class="catalog-search-input" placeholder="Search in store...">
+                            <button type="button" id="catalog-search-clear" class="catalog-search-clear" style="display: none;" aria-label="Clear search">✕</button>
+                        </div>
+
+                        <div class="catalog-sort-wrap">
+                            <label for="listing-sort-select" class="sort-label">Sort:</label>
+                            <select class="sort-select" id="listing-sort-select" aria-label="Sort products">
+                                <option value="recommended">Recommended</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="newest">Newest Arrivals</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Status Bar: Product Count -->
+                <div class="catalog-status-bar">
+                    <div class="toolbar-count" id="listing-count-display">
+                        Showing products...
+                    </div>
+                </div>
+
+                <!-- 3. Full-Width Product Grid -->
+                <div class="product-grid" id="listing-products-grid">
+                    <!-- Populated dynamically by js/main.js -->
+                </div>
+
+                <!-- 4. Empty State Container -->
+                <div class="empty-shop-container" id="empty-shop-state" style="display: none;">
+                    <div class="empty-shop-card text-center">
+                        <div class="empty-shop-icon">✦</div>
+                        <h2 class="empty-shop-title">No Products Found</h2>
+                        <p class="empty-shop-desc">Try selecting another category or clearing your search term.</p>
+                        <button type="button" class="btn-primary" id="btn-reset-catalog">View All Products</button>
+                    </div>
+                </div>
+
+                <!-- 5. Pagination / Load More -->
+                <div class="listing-pagination" id="listing-load-more-wrap" style="display: none;">
+                    <button type="button" class="btn-load-more" id="btn-load-more">
+                        LOAD MORE PRODUCTS
+                    </button>
+                    <p class="pagination-progress" id="listing-progress-text"></p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Quick View Product Modal -->
+    <div class="modal-overlay" id="quick-view-modal" role="dialog" aria-modal="true" aria-label="Product Quick View">
+        <div class="quick-view-card">
+            <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">✕</button>
+            <div class="quick-view-media">
+                <img id="qv-image" src="" alt="Product Quick View">
+            </div>
+            <div class="quick-view-details">
+                <span class="qv-category" id="qv-category">Category</span>
+                <h2 class="qv-title" id="qv-title">Product Name</h2>
+                <div class="qv-pricing">
+                    <span class="qv-price" id="qv-price">₹0</span>
+                    <span class="qv-original" id="qv-original-price"></span>
+                    <span class="qv-discount" id="qv-discount"></span>
+                </div>
+                <p class="qv-desc" id="qv-desc"></p>
+                <div>
+                    <label class="qv-option-label">Select Size / Variant:</label>
+                    <div class="qv-size-selector" id="qv-size-selector"></div>
+                </div>
+                <div class="qv-qty-row">
+                    <label class="qv-option-label" style="margin-bottom: 0;">Quantity:</label>
+                    <div class="qty-counter">
+                        <button type="button" class="qty-btn" id="qv-qty-minus">-</button>
+                        <input type="text" class="qty-input" id="qv-qty-input" value="1" readonly>
+                        <button type="button" class="qty-btn" id="qv-qty-plus">+</button>
+                    </div>
+                </div>
+                <div class="qv-actions">
+                    <button type="button" class="btn-primary" id="qv-add-cart-btn">Add to Cart</button>
+                    <a href="#" class="btn-secondary" id="qv-view-full-details">Full Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <!-- Professional Footer -->
+    <footer class="site-footer" id="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="brand-logo" style="margin-bottom: 16px; display: inline-block; padding: 0;">
+                        <img src="../assets/logo/logo-light.png" alt="UNIQUE COLLECTION - Fashion • Jewellery • You" class="brand-logo-img" style="height: 50px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));">
+                    </a>
+                    <p>UNIQUE COLLECTION brings you authentic Indian ethnic fashion and contemporary anti-tarnish jewellery, celebrating feminine beauty and timeless craftsmanship.</p>
+                    <h4 class="footer-heading" style="margin-top: 24px; font-size: 1rem;">Client Contact Details</h4>
+                    <ul class="footer-contact-info">
+                        <li><span class="footer-contact-icon">✉</span><a href="mailto:Syedalifathima3232@gmail.com">Syedalifathima3232@gmail.com</a></li>
+                        <li><span class="footer-contact-icon">✆</span><a href="tel:994160263">99416 0263</a></li>
+                        <li><span class="footer-contact-icon">✆</span><a href="tel:9962602630">99626 02630</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Shop Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="category.html?cat=2-piece-churidar-sets">2-Piece Churidar Sets</a></li>
+                        <li><a href="category.html?cat=3-piece-churidar-sets">3-Piece Churidar Sets</a></li>
+                        <li><a href="category.html?cat=designer-lehengas">Designer Lehengas</a></li>
+                        <li><a href="category.html?cat=trendy-sharara-sets">Trendy Sharara Sets</a></li>
+                        <li><a href="category.html?cat=cotton-leggings">Cotton Leggings</a></li>
+                        <li><a href="category.html?cat=womens-innerwear-panties">Innerwear &amp; Panties</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Fine Jewellery</h4>
+                    <ul class="footer-links">
+                        <li><a href="category.html?cat=bracelets-kadas">Bracelets &amp; Kadas</a></li>
+                        <li><a href="category.html?cat=trendy-earrings-rings">Trendy Earrings &amp; Rings</a></li>
+                        <li><a href="category.html?cat=stylish-anklets-kolusu">Anklets &amp; Kolusu</a></li>
+                        <li><a href="category.html?cat=fancy-bangles">Fancy Bangles</a></li>
+                        <li><a href="category.html?cat=guaranteed-earrings-studs">Guaranteed Studs</a></li>
+                        <li><a href="category.html?cat=gold-plated-chains">Gold-Plated Chains</a></li>
+                        <li><a href="category.html?cat=premium-covering-bangles">Covering Bangles</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Customer Care</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About UNIQUE COLLECTION</a></li>
+                        <li><a href="contact.html">Customer Support</a></li>
+                        <li><a href="my-orders.html">Track Order Status</a></li>
+                        <li><a href="wishlist.html">My Wishlist</a></li>
+                        <li><a href="login.html">Account Login</a></li>
+                        <li><a href="cart.html">Shopping Bag</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>
+                    <p>&copy; 2026 UNIQUE COLLECTION. All Rights Reserved. Crafted with elegance for Indian women.</p>
+                </div>
+                <div class="footer-payments-pill">
+                    <span class="payment-tag">UPI</span>
+                    <span class="payment-tag">RuPay</span>
+                    <span class="payment-tag">Visa</span>
+                    <span class="payment-tag">Mastercard</span>
+                    <span class="payment-tag">Net Banking</span>
+                    <span class="payment-tag">Cash on Delivery</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
