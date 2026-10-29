@@ -483,7 +483,6 @@
       <a href="${catUrl}" class="category-card-link-wrapper" aria-label="Explore ${cat.name}">
         <div class="category-img-wrap">
           <img src="${catImg}" alt="${cat.name} - UNIQUE COLLECTION" loading="lazy">
-          <span class="category-badge-pill">${cat.badge || 'Collection'}</span>
         </div>
       </a>
       <div class="category-info">
@@ -3769,7 +3768,6 @@
               <a href="${detailUrl}">
                 <img src="${getRootUrl(product.image)}" alt="${product.name}" class="wishlist-img" loading="lazy">
               </a>
-              <span class="wishlist-badge-pill">${categoryName}</span>
               <button type="button" class="btn-remove-wishlist-item" title="Remove from Wishlist" aria-label="Remove ${product.name} from wishlist">
                 ✕
               </button>

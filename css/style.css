@@ -1474,19 +1474,7 @@ button {
 }
 
 .category-badge-pill {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background-color: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(6px);
-  color: var(--color-primary);
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: var(--radius-full);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  box-shadow: var(--shadow-xs);
+  display: none !important;
 }
 
 .category-info {
@@ -3252,25 +3240,9 @@ button {
   transition: transform 0.3s ease;
 }
 
-.gallery-badge-pill {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: linear-gradient(135deg, var(--color-gold), #dfc282);
-  color: var(--color-dark);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-  z-index: 2;
-  box-shadow: var(--shadow-xs);
-}
-
+.gallery-badge-pill,
 .gallery-badge-pill.sale {
-  background: var(--color-primary);
-  color: var(--color-white);
+  display: none !important;
 }
 
 .gallery-thumbnails-wrap {
@@ -5514,18 +5486,7 @@ button {
 }
 
 .wishlist-badge-pill {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background-color: rgba(255, 255, 255, 0.95);
-  color: var(--color-primary);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  box-shadow: var(--shadow-xs);
+  display: none !important;
 }
 
 .btn-remove-wishlist-item {
