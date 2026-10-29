@@ -1,11 +1,13 @@
 /* ==========================================================================
    UNIQUE COLLECTION - Master Stylesheet
-   Brand Colour Palette:
-   - Primary Dusty Rose Pink: #C76A91
-   - Blush Pink:              #F8E9EF
-   - Elegant Black:           #171316
-   - Champagne Gold:          #C5A15B
-   - Pure White:              #FFFFFF
+   Luxury Brand Colour Palette:
+   - Deep Burgundy / Wine: #43001F
+   - Dark Plum:            #290018
+   - Royal Magenta:        #9E1458
+   - Champagne Gold:       #D6AD55
+   - Warm Cream:           #FFF0D5
+   - Soft Ivory:           #FFF9F2
+   - Pure White:           #FFFFFF
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -13,40 +15,46 @@
    -------------------------------------------------------------------------- */
 :root {
   /* Brand Color Palette */
-  --color-primary: #C76A91;         /* Dusty rose pink */
-  --color-primary-dark: #a94b72;
-  --color-primary-light: #e599b7;
-  --color-blush: #F8E9EF;           /* Blush pink background & accents */
-  --color-blush-soft: #fcf4f7;
-  --color-dark: #171316;            /* Elegant black */
-  --color-dark-surface: #241d22;
-  --color-gold: #C5A15B;            /* Champagne gold */
-  --color-gold-hover: #b08a43;
-  --color-gold-light: #faeecd;
+  --color-burgundy: #43001F;        /* Deep Burgundy / Wine */
+  --color-plum: #290018;            /* Dark Plum */
+  --color-primary: #9E1458;         /* Royal Magenta (primary actions, prices, active states) */
+  --color-primary-dark: #780e42;
+  --color-primary-light: #be2e72;
+  --color-gold: #D6AD55;            /* Champagne Gold (luxury accents, badges, highlights) */
+  --color-gold-hover: #c4983e;
+  --color-gold-light: #faeccf;
+  --color-gold-soft: rgba(214, 173, 85, 0.15);
+  --color-cream: #FFF0D5;           /* Warm Cream (soft highlight surfaces) */
+  --color-ivory: #FFF9F2;           /* Soft Ivory (main content backgrounds) */
   --color-white: #FFFFFF;
 
-  /* Neutral & Functional Shades */
-  --color-bg-body: #FAFAF9;
+  /* Legacy & Functional mappings for site-wide cohesion */
+  --color-blush: #FFF0D5;           /* Warm Cream replacing old pink */
+  --color-blush-soft: #FFF9F2;      /* Soft Ivory replacing old light pink */
+  --color-dark: #290018;            /* Dark Plum replacing generic black */
+  --color-dark-surface: #43001F;    /* Deep Burgundy */
+  --color-bg-body: #FFF9F2;         /* Soft Ivory page background */
+  --color-bg-light: #FFF0D5;        /* Warm Cream */
   --color-surface: #FFFFFF;
-  --color-text-main: #171316;
-  --color-text-muted: #6b6368;
-  --color-text-light: #948b91;
-  --color-border: #E8D5DE;
-  --color-border-light: #F4E7EE;
+  --color-text-main: #290018;       /* Dark Plum for crisp readability */
+  --color-text-muted: #6e5760;
+  --color-text-light: #9c8a91;
+  --color-border: #E8D6C3;          /* Warm Champagne border */
+  --color-border-light: #F7EEE2;
   --color-success: #288c5e;
-  --color-discount: #b5264b;
+  --color-discount: #9E1458;        /* Royal Magenta discount tags */
 
   /* Typography */
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Elevation & Shadows */
-  --shadow-xs: 0 1px 4px rgba(23, 19, 22, 0.04);
-  --shadow-sm: 0 2px 10px rgba(23, 19, 22, 0.06);
-  --shadow-md: 0 6px 20px rgba(23, 19, 22, 0.08);
-  --shadow-lg: 0 12px 32px rgba(23, 19, 22, 0.12);
-  --shadow-gold: 0 4px 18px rgba(197, 161, 91, 0.25);
-  --shadow-pink: 0 4px 18px rgba(199, 106, 145, 0.25);
+  --shadow-xs: 0 1px 4px rgba(41, 0, 24, 0.05);
+  --shadow-sm: 0 2px 10px rgba(41, 0, 24, 0.08);
+  --shadow-md: 0 6px 20px rgba(41, 0, 24, 0.10);
+  --shadow-lg: 0 12px 32px rgba(41, 0, 24, 0.16);
+  --shadow-gold: 0 4px 18px rgba(214, 173, 85, 0.30);
+  --shadow-pink: 0 4px 18px rgba(158, 20, 88, 0.28);
 
   /* Border Radii */
   --radius-xs: 3px;
@@ -152,18 +160,44 @@ button {
   padding-right: 36px;
 }
 
+.bg-blush {
+  background-color: var(--color-blush-soft) !important;
+}
+
+.bg-cream {
+  background-color: var(--color-cream) !important;
+}
+
+.bg-burgundy {
+  background-color: var(--color-burgundy) !important;
+  color: var(--color-white) !important;
+}
+
+.bg-plum {
+  background-color: var(--color-plum) !important;
+  color: var(--color-white) !important;
+}
+
+.text-gold {
+  color: var(--color-gold) !important;
+}
+
+.text-magenta {
+  color: var(--color-primary) !important;
+}
+
 /* --------------------------------------------------------------------------
    3. Top Announcement Bar
    -------------------------------------------------------------------------- */
 .announcement-bar {
-  background-color: var(--color-dark);
-  color: var(--color-white);
-  padding: 9px 16px;
+  background-color: var(--color-burgundy);
+  color: var(--color-cream);
+  padding: 10px 16px;
   text-align: center;
   font-size: 0.8125rem;
   letter-spacing: 0.08em;
   font-weight: 500;
-  border-bottom: 1px solid rgba(197, 161, 91, 0.35);
+  border-bottom: 1px solid rgba(214, 173, 85, 0.45);
   position: relative;
   z-index: 101;
 }
@@ -178,18 +212,19 @@ button {
 
 .announcement-sparkle {
   color: var(--color-gold);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .announcement-badge {
-  background: linear-gradient(135deg, var(--color-gold), #dfc282);
-  color: var(--color-dark);
-  padding: 2px 8px;
+  background: linear-gradient(135deg, var(--color-gold), #e8c575);
+  color: var(--color-plum);
+  padding: 2px 10px;
   border-radius: var(--radius-full);
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* --------------------------------------------------------------------------
@@ -282,7 +317,7 @@ button {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 28px;
   height: 100%;
 }
 
@@ -293,8 +328,23 @@ button {
   align-items: center;
 }
 
+/* Universal strike-through eradication on navigation */
+.main-nav a,
+.nav-list a,
+.nav-item a,
+.nav-link,
+.nav-dropdown a,
+.dropdown-menu-list a,
+.mobile-nav-drawer a,
+.mobile-menu-link,
+.mobile-sub-menu a {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  -webkit-text-decoration-line: none !important;
+}
+
 .nav-link {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 500;
   letter-spacing: 0.04em;
   color: var(--color-dark);
@@ -302,15 +352,15 @@ button {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  text-decoration: none;
+  gap: 6px;
+  text-decoration: none !important;
   transition: color var(--transition-fast);
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   width: 0;
   height: 2px;
@@ -322,7 +372,7 @@ button {
 .nav-link.active {
   color: var(--color-primary);
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .nav-link:hover::after,
@@ -334,73 +384,109 @@ button {
   font-size: 0.65rem;
   transition: transform var(--transition-fast);
   color: var(--color-text-light);
+  margin-left: 2px;
 }
 
-.nav-item:hover .dropdown-chevron {
+.nav-item:hover .dropdown-chevron,
+.nav-item.dropdown-open .dropdown-chevron {
   transform: rotate(180deg);
   color: var(--color-primary);
 }
 
-/* Mega-Menu / Dropdown Menus */
+/* Dropdown Menus (Neat white container with subtle shadow & gold top accent) */
 .nav-dropdown {
   position: absolute;
   top: 100%;
-  left: -20px;
+  left: 0;
   background-color: var(--color-white);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg);
-  padding: 20px 24px;
-  min-width: 260px;
+  border-top: 3px solid var(--color-gold);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  box-shadow: 0 16px 36px rgba(41, 0, 24, 0.12);
+  padding: 8px 0;
+  min-width: 275px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity var(--transition-normal), transform var(--transition-normal), visibility var(--transition-normal);
-  z-index: 110;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 120;
+  pointer-events: none;
 }
 
-.nav-item:hover .nav-dropdown {
+/* Invisible bridge so mouse cursor smoothly moves from navbar item to dropdown without closing */
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background: transparent;
+}
+
+/* Open on hover OR open via tap / click */
+.nav-item:hover .nav-dropdown,
+.nav-item.dropdown-open .nav-dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
-.dropdown-mega {
-  min-width: 540px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  left: -120px;
+/* Vertical Clean Dropdown List */
+.dropdown-vertical {
+  min-width: 290px;
+  max-height: 520px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
-.dropdown-col-title {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: 12px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid var(--color-border-light);
-  letter-spacing: 0.02em;
+.dropdown-vertical::-webkit-scrollbar {
+  width: 5px;
 }
 
-.dropdown-menu-list li {
-  margin-bottom: 10px;
+.dropdown-vertical::-webkit-scrollbar-track {
+  background: rgba(41, 0, 24, 0.04);
 }
 
-.dropdown-menu-list a {
-  font-size: 0.875rem;
-  color: var(--color-text-main);
+.dropdown-vertical::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+
+.dropdown-vertical .dropdown-menu-list {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown-vertical .dropdown-menu-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-vertical .dropdown-menu-list a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 0;
-  transition: padding var(--transition-fast), color var(--transition-fast);
+  padding: 11px 22px;
+  font-family: var(--font-jost);
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: var(--color-dark);
+  text-decoration: none !important;
+  background: transparent;
+  transition: all 0.18s ease;
+  border-left: 3px solid transparent;
 }
 
-.dropdown-menu-list a:hover {
+.dropdown-vertical .dropdown-menu-list a:hover {
+  background-color: var(--color-cream);
   color: var(--color-primary);
-  padding-left: 6px;
+  border-left-color: var(--color-primary);
+  padding-left: 26px;
 }
 
 .dropdown-badge {
@@ -1019,100 +1105,182 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   7b. Full-Size Hero Banner
+   7b. New Luxury Homepage Hero Banner (Deep Burgundy & Champagne Gold)
    -------------------------------------------------------------------------- */
-.hero-banner-full-section {
+.hero-banner-luxury-section {
   width: 100%;
-  background-color: #fae8f0;
-  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  background-color: var(--color-burgundy);
   overflow: hidden;
   margin: 0;
   padding: 0;
+  border-bottom: 2px solid var(--color-gold);
 }
 
-.hero-banner-stage {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+.hero-luxury-stage {
   position: relative;
+  width: 100%;
+  min-height: 560px;
+  max-height: 700px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-plum);
 }
 
-.hero-banner-container {
+.hero-luxury-stage picture {
   width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  overflow: hidden;
+  height: 100%;
   display: block;
 }
 
-.hero-banner-container picture {
-  display: block;
+.hero-luxury-img {
   width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.hero-full-banner-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  min-height: 560px;
+  max-height: 700px;
   object-fit: cover;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: high-quality;
-  margin: 0;
-  padding: 0;
+  object-position: right center;
+  display: block;
 }
 
-/* Interactive Hotspots over the graphic buttons */
-.hero-banner-hotspots {
+.hero-luxury-overlay {
   position: absolute;
   inset: 0;
-  pointer-events: none;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(41, 0, 24, 0.94) 0%, rgba(67, 0, 31, 0.85) 36%, rgba(67, 0, 31, 0.35) 55%, transparent 100%);
+  z-index: 5;
 }
 
-.hero-hotspot {
-  position: absolute;
-  pointer-events: auto;
-  cursor: pointer;
+.hero-luxury-container {
+  width: 100%;
+}
+
+.hero-luxury-content {
+  max-width: 580px;
+  padding: 40px 0;
+  text-align: left;
+}
+
+.hero-luxury-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.hero-sparkle {
+  color: var(--color-gold);
+  font-size: 0.95rem;
+}
+
+.hero-luxury-title {
+  font-family: var(--font-heading);
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: var(--color-cream);
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero-luxury-desc {
+  font-size: 1.12rem;
+  color: var(--color-ivory);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 490px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-luxury-offer-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(41, 0, 24, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  padding: 10px 18px;
+  color: var(--color-gold);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.offer-sparkle {
+  color: var(--color-gold);
+}
+
+.hero-luxury-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 14px 32px;
   border-radius: var(--radius-full);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 18px rgba(158, 20, 88, 0.35);
+  transition: all var(--transition-fast);
+  text-decoration: none;
 }
 
-/* "SHOP WOMEN'S WEAR" hotspot coordinates */
-.hotspot-clothing {
-  left: 8.2%;
-  top: 77.2%;
-  width: 20.8%;
-  height: 8.8%;
+.btn-hero-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(158, 20, 88, 0.5);
+  color: var(--color-white);
 }
 
-/* "EXPLORE JEWELLERY" hotspot coordinates */
-.hotspot-jewellery {
-  left: 30.6%;
-  top: 77.2%;
-  width: 19.8%;
-  height: 8.8%;
+.btn-hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: rgba(41, 0, 24, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--color-cream);
+  border: 1.5px solid var(--color-gold);
+  padding: 13px 30px;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all var(--transition-fast);
+  text-decoration: none;
 }
 
-/* Slide 2 Hotspot Coordinates: "SHOP JEWELLERY" & "EXPLORE COLLECTIONS" */
-.hotspot-slide2-jewellery {
-  left: 35.1%;
-  top: 74.5%;
-  width: 14.5%;
-  height: 5.8%;
+.btn-hero-secondary:hover {
+  background-color: var(--color-gold);
+  color: var(--color-plum);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
 }
 
-.hotspot-slide2-explore {
-  left: 50.2%;
-  top: 74.5%;
-  width: 15.6%;
-  height: 5.8%;
-}
-
-/* Slider Controls & Behavior */
+/* Backward compatibility for slider elements if referenced */
 .hero-slider-section {
   position: relative;
   width: 100%;
@@ -1134,81 +1302,6 @@ button {
 .hero-slide.active {
   display: block;
   opacity: 1;
-  animation: heroSlideFadeIn 0.5s ease-in-out forwards;
-}
-
-@keyframes heroSlideFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.hero-slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-full);
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 15;
-  color: var(--color-dark);
-  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), color var(--transition-fast);
-}
-
-.hero-slider-arrow:hover {
-  background-color: var(--color-white);
-  color: var(--color-primary);
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.25);
-}
-
-.hero-slider-prev {
-  left: 20px;
-}
-
-.hero-slider-next {
-  right: 20px;
-}
-
-.hero-slider-dots {
-  position: absolute;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 15;
-}
-
-.hero-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 6px;
-  background-color: rgba(255, 255, 255, 0.65);
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  padding: 0;
-  transition: width 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.hero-dot.active {
-  width: 32px;
-  background-color: var(--color-primary);
-  border-color: var(--color-white);
-  box-shadow: 0 2px 8px rgba(199, 106, 145, 0.6);
-}
-
-.hero-hotspot:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(199, 106, 145, 0.45);
-  background-color: rgba(255, 255, 255, 0.12);
 }
 
 .sr-only {
@@ -1227,10 +1320,10 @@ button {
 .hero-mobile-cta-bar {
   display: none;
   padding: 16px 20px;
-  background-color: var(--color-white);
+  background-color: var(--color-plum);
   gap: 12px;
-  border-top: 1px solid var(--color-border-light);
-  border-bottom: 1px solid var(--color-border-light);
+  border-top: 1px solid rgba(214, 173, 85, 0.35);
+  border-bottom: 1px solid rgba(214, 173, 85, 0.35);
 }
 
 .hero-mobile-cta-bar .btn-primary,
@@ -1241,11 +1334,13 @@ button {
   padding: 12px 16px;
 }
 
-/* Hero Trust Ribbon */
+/* Hero Trust Ribbon - Royal Dark Plum & Champagne Gold */
 .hero-trust-ribbon {
-  background-color: var(--color-white);
-  border-top: 1px solid var(--color-border-light);
+  background-color: var(--color-plum);
+  border-top: 1px solid rgba(214, 173, 85, 0.35);
+  border-bottom: 1px solid rgba(214, 173, 85, 0.35);
   padding: 14px 0;
+  color: var(--color-cream);
 }
 
 .hero-ribbon-grid {
@@ -1263,11 +1358,11 @@ button {
   gap: 8px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--color-dark);
+  color: var(--color-cream);
 }
 
 .ribbon-icon {
-  color: var(--color-primary);
+  color: var(--color-gold);
   font-size: 1rem;
 }
 
@@ -1514,26 +1609,7 @@ button {
 }
 
 .product-badge-flag {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background-color: var(--color-dark);
-  color: var(--color-white);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: var(--radius-xs);
-  z-index: 2;
-}
-
-.product-badge-flag.sale {
-  background-color: var(--color-discount);
-}
-
-.product-badge-flag.gold {
-  background-color: var(--color-gold);
+  display: none !important;
 }
 
 /* Interactive Floating Wishlist Heart */
@@ -1692,11 +1768,13 @@ button {
    11. Promotional Offer Banner (10% to 50% OFF)
    -------------------------------------------------------------------------- */
 .promo-banner-section {
-  background: linear-gradient(135deg, var(--color-dark) 0%, #2f2129 100%);
+  background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-burgundy) 100%);
   color: var(--color-white);
   padding: 64px 0;
   position: relative;
   overflow: hidden;
+  border-top: 1px solid rgba(214, 173, 85, 0.3);
+  border-bottom: 1px solid rgba(214, 173, 85, 0.3);
 }
 
 .promo-banner-section::before {
@@ -1706,7 +1784,7 @@ button {
   right: 0;
   bottom: 0;
   width: 45%;
-  background: radial-gradient(circle, rgba(197, 161, 91, 0.18) 0%, rgba(23, 19, 22, 0) 70%);
+  background: radial-gradient(circle, rgba(214, 173, 85, 0.22) 0%, rgba(41, 0, 24, 0) 70%);
   pointer-events: none;
 }
 
@@ -1773,7 +1851,7 @@ button {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  border: 4px solid rgba(197, 161, 91, 0.4);
+  border: 3px solid var(--color-gold);
 }
 
 .promo-image-box img {
@@ -1817,13 +1895,14 @@ button {
   width: 64px;
   height: 64px;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, var(--color-blush), #f6dbe6);
+  background: linear-gradient(135deg, var(--color-cream), var(--color-ivory));
   color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
   margin: 0 auto 20px;
+  border: 1.5px solid rgba(214, 173, 85, 0.4);
 }
 
 .highlight-box h3 {
@@ -1870,6 +1949,7 @@ button {
   justify-content: center;
   font-size: 1.25rem;
   flex-shrink: 0;
+  border: 1px solid rgba(214, 173, 85, 0.35);
 }
 
 .benefit-info h4 {
@@ -1917,7 +1997,7 @@ button {
 .insta-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(199, 106, 145, 0.7);
+  background-color: rgba(158, 20, 88, 0.82);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1934,6 +2014,7 @@ button {
 .insta-overlay span {
   font-size: 1.4rem;
   margin-bottom: 4px;
+  color: var(--color-gold);
 }
 
 .insta-overlay p {
@@ -1946,7 +2027,7 @@ button {
    15. Newsletter Subscription Section
    -------------------------------------------------------------------------- */
 .newsletter-section {
-  background: linear-gradient(135deg, #FFF9FB 0%, #F8E9EF 100%);
+  background: linear-gradient(135deg, var(--color-ivory) 0%, var(--color-cream) 100%);
   padding: 60px 0;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
@@ -2472,9 +2553,9 @@ button {
 
 /* Page Hero Banner for Shop & Categories */
 .page-hero-banner {
-  background: linear-gradient(135deg, #FFF6F9 0%, #F8E9EF 50%, #F5E1EB 100%);
+  background: linear-gradient(135deg, var(--color-ivory) 0%, var(--color-cream) 100%);
   padding: 44px 0 48px;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(214, 173, 85, 0.35);
   text-align: center;
   position: relative;
 }
@@ -2489,7 +2570,7 @@ button {
   text-transform: uppercase;
   padding: 4px 14px;
   border-radius: var(--radius-full);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(214, 173, 85, 0.4);
   margin-bottom: 12px;
 }
 
@@ -2524,10 +2605,256 @@ button {
 }
 
 .category-nav-pills {
+  display: none !important;
+}
+
+/* =========================================================================
+   Shop with Styles - Reference Layout (Image 2)
+   Luxury Dark Wine & Plum Theme
+   ========================================================================= */
+.shop-styles-section {
+  padding: 0 0 60px;
+  background-color: var(--color-bg, #FFFDFC);
+}
+
+.shop-styles-hero-banner {
+  background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-burgundy) 100%);
+  padding: 44px 0 32px;
+  border-bottom: 2px solid var(--color-gold);
+  color: var(--color-white);
+  position: relative;
+  text-align: center;
+}
+
+.shop-styles-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.shop-styles-title {
+  font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+  font-size: clamp(2.2rem, 3.8vw, 3rem);
+  font-weight: 600;
+  color: #FFFFFF !important;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.shop-styles-accent {
+  color: var(--color-gold, #D6AD55) !important;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.shop-styles-desc {
+  font-size: 0.98rem;
+  color: #dfd8dc;
+  margin: 0 auto;
+  max-width: 620px;
+}
+
+/* Tab filter controls */
+.styles-filter-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 10px;
   align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 0;
+  padding-bottom: 6px;
+  border-bottom: none;
+}
+
+.styles-tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.styles-tab-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(214, 173, 85, 0.4);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+}
+
+.styles-tab-btn:hover {
+  border-color: var(--color-gold, #D6AD55);
+  background: rgba(214, 173, 85, 0.22);
+  color: var(--color-gold-light, #faeccf);
+}
+
+.styles-tab-btn.active {
+  background: var(--color-gold, #D6AD55);
+  color: var(--color-plum, #290018);
+  font-weight: 700;
+  border-color: var(--color-gold, #D6AD55);
+  box-shadow: 0 4px 14px rgba(214, 173, 85, 0.35);
+}
+
+.styles-search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(214, 173, 85, 0.45);
+  border-radius: 999px;
+  padding: 8px 18px;
+  min-width: 280px;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.styles-search-box:focus-within {
+  border-color: var(--color-gold, #D6AD55);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(214, 173, 85, 0.25);
+}
+
+.styles-search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.88rem;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+.styles-search-box input::placeholder {
+  color: #dfd8dc;
+}
+
+/* Breadcrumb navigation for Shop page */
+.page-shop .breadcrumb-nav {
+  background-color: var(--color-plum, #290018);
+  border-bottom: 1px solid rgba(214, 173, 85, 0.2);
+}
+
+.page-shop .breadcrumb-item a {
+  color: #dfd8dc;
+}
+
+.page-shop .breadcrumb-item a:hover {
+  color: var(--color-gold, #D6AD55);
+}
+
+.page-shop .breadcrumb-separator {
+  color: var(--color-gold, #D6AD55);
+}
+
+.page-shop .breadcrumb-item.active {
+  color: var(--color-gold, #D6AD55);
+  font-weight: 600;
+}
+
+/* Styles 4-Column Grid (Image 2) */
+.shop-styles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px 22px;
+}
+
+@media (max-width: 1024px) {
+  .shop-styles-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .shop-styles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 10px;
+  }
+}
+
+/* Individual Style Card */
+.style-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.style-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #F8F6F4;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.style-card:hover .style-card-media {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(67, 0, 31, 0.12);
+}
+
+.style-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.style-card:hover .style-card-media img {
+  transform: scale(1.06);
+}
+
+/* Bottom right badge / arrow (Completely disabled as per user instruction) */
+.style-card-badge {
+  display: none !important;
+}
+
+/* Style Title */
+.style-card-title {
+  font-family: var(--font-body, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #1A1A1A;
+  text-align: center;
+  margin: 12px 0 0 0;
+  transition: color 0.2s ease;
+  line-height: 1.3;
+}
+
+.style-card:hover .style-card-title {
+  color: var(--color-primary, #9E1458);
+}
+
+.back-to-styles-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-burgundy, #43001F);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #FFF;
+  border: 1px solid var(--color-border, #EADBC8);
+  transition: all 0.2s ease;
+}
+
+.back-to-styles-link:hover {
+  background: var(--color-blush, #FFF9F2);
+  color: var(--color-primary, #9E1458);
+  border-color: var(--color-gold, #D6AD55);
 }
 
 .category-pill-btn {
@@ -3255,10 +3582,10 @@ button {
 
 .color-pill-btn.active {
   border-color: var(--color-primary);
-  background-color: rgba(224, 76, 126, 0.08);
+  background-color: rgba(158, 20, 88, 0.08);
   color: var(--color-primary);
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(224, 76, 126, 0.15);
+  box-shadow: 0 2px 8px rgba(158, 20, 88, 0.18);
 }
 
 .color-swatch-circle {
@@ -3305,7 +3632,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #faf7f9;
+  background-color: var(--color-cream);
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--color-dark);
@@ -3445,8 +3772,8 @@ button {
 .product-highlights-card {
   margin-top: 24px;
   padding: 20px 22px;
-  background-color: #fdfafb;
-  border: 1px solid var(--color-border);
+  background-color: var(--color-ivory);
+  border: 1px solid rgba(214, 173, 85, 0.3);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-xs);
 }
@@ -4276,10 +4603,10 @@ button {
   color: var(--color-text-muted);
   line-height: 1.45;
   margin-top: 7px;
-  background-color: #faf7f9;
+  background-color: var(--color-cream);
   padding: 6px 10px;
   border-radius: var(--radius-xs);
-  border-left: 2px solid var(--color-primary-light);
+  border-left: 2px solid var(--color-gold);
 }
 
 /* Payment Methods */
@@ -4303,13 +4630,13 @@ button {
 }
 
 .payment-option-card:hover {
-  border-color: var(--color-primary-light);
+  border-color: var(--color-gold);
   background-color: var(--color-blush-soft);
 }
 
 .payment-option-card.selected {
   border-color: var(--color-primary);
-  background-color: #fdf5f8;
+  background-color: var(--color-ivory);
   box-shadow: 0 0 0 1px var(--color-primary);
 }
 
@@ -5015,10 +5342,81 @@ button {
    21. Wishlist Page Styles
    -------------------------------------------------------------------------- */
 .page-wishlist .page-hero-banner {
-  background: linear-gradient(135deg, #FFF0F5 0%, #FBE3ED 50%, #F5D3E3 100%);
+  background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-burgundy) 100%);
   padding: 44px 0 36px;
   text-align: center;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(214, 173, 85, 0.35);
+  color: var(--color-white);
+}
+
+.page-wishlist .page-hero-banner h1 {
+  color: var(--color-white);
+}
+
+.page-wishlist .page-hero-banner p {
+  color: #dfd8dc;
+}
+
+/* --------------------------------------------------------------------------
+   21b. About Us & Contact Us Pages - Luxury Dark Wine / Plum Theme
+   -------------------------------------------------------------------------- */
+.page-about .page-hero-banner,
+.page-contact .page-hero-banner {
+  background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-burgundy) 100%);
+  padding: 48px 0 44px;
+  text-align: center;
+  border-bottom: 2px solid var(--color-gold);
+  color: var(--color-white);
+  position: relative;
+}
+
+.page-about .page-hero-banner .category-group-badge,
+.page-contact .page-hero-banner .category-group-badge {
+  background: rgba(214, 173, 85, 0.18);
+  color: var(--color-gold-light);
+  border: 1px solid var(--color-gold);
+}
+
+.page-about .page-hero-banner .page-hero-title,
+.page-contact .page-hero-banner .page-hero-title {
+  color: var(--color-white);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.page-about .page-hero-banner .page-hero-desc,
+.page-contact .page-hero-banner .page-hero-desc {
+  color: #dfd8dc;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Breadcrumb navigation for About & Contact pages */
+.page-about .breadcrumb-nav,
+.page-contact .breadcrumb-nav {
+  background-color: var(--color-plum);
+  border-bottom: 1px solid rgba(214, 173, 85, 0.2);
+}
+
+.page-about .breadcrumb-item a,
+.page-contact .breadcrumb-item a {
+  color: #dfd8dc;
+}
+
+.page-about .breadcrumb-item a:hover,
+.page-contact .breadcrumb-item a:hover {
+  color: var(--color-gold);
+}
+
+.page-about .breadcrumb-separator,
+.page-contact .breadcrumb-separator {
+  color: var(--color-gold);
+}
+
+.page-about .breadcrumb-item.active,
+.page-contact .breadcrumb-item.active {
+  color: var(--color-gold);
+  font-weight: 600;
 }
 
 .wishlist-section {
@@ -5272,13 +5670,14 @@ button {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: #FFF0F5;
+  background: var(--color-cream);
   color: var(--color-primary);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 2.2rem;
   margin-bottom: 22px;
+  border: 1px solid rgba(214, 173, 85, 0.4);
 }
 
 .wishlist-empty-title {
@@ -5302,13 +5701,13 @@ button {
    22. Full-Width Fine Jewellery Showcase Promotional Banner (Banner #3)
    -------------------------------------------------------------------------- */
 .promo-banner-jewellery {
-  background: linear-gradient(135deg, #260B1C 0%, #461434 50%, #1A0713 100%);
+  background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-burgundy) 50%, #1e0012 100%);
   color: var(--color-white);
   padding: 76px 0;
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(212, 175, 55, 0.35);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+  border-top: 1px solid rgba(214, 173, 85, 0.35);
+  border-bottom: 1px solid rgba(214, 173, 85, 0.35);
 }
 
 .promo-banner-jewellery::before {
@@ -5318,7 +5717,7 @@ button {
   left: -20%;
   width: 70%;
   height: 200%;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(38, 11, 28, 0) 70%);
+  background: radial-gradient(circle, rgba(214, 173, 85, 0.16) 0%, rgba(41, 0, 24, 0) 70%);
   pointer-events: none;
 }
 

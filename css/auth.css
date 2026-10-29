@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   padding: 50px 16px;
-  background: linear-gradient(180deg, var(--color-bg-light) 0%, #FAF2F5 100%);
+  background: linear-gradient(180deg, var(--color-ivory) 0%, var(--color-cream) 100%);
 }
 
 /* 2. Authentication Card Container */
@@ -21,7 +21,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 40px 36px;
-  box-shadow: 0 16px 36px rgba(23, 19, 22, 0.08);
+  box-shadow: 0 16px 36px rgba(41, 0, 24, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -45,14 +45,14 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: var(--color-bg-light);
+  background: var(--color-cream);
   color: var(--color-primary);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   margin-bottom: 14px;
-  border: 1px solid rgba(199, 106, 145, 0.2);
+  border: 1px solid rgba(214, 173, 85, 0.4);
 }
 
 .auth-header h1 {
@@ -72,7 +72,7 @@
 /* Auth Navigation Segmented Tabs */
 .auth-tabs-nav {
   display: flex;
-  background-color: #F8F3F6;
+  background-color: var(--color-cream);
   border-radius: 30px;
   padding: 4px;
   margin-bottom: 24px;
@@ -121,7 +121,7 @@
 .input-mobile-group:focus-within {
   border-color: var(--color-primary);
   background-color: var(--color-white);
-  box-shadow: 0 0 0 3px rgba(199, 106, 145, 0.12);
+  box-shadow: 0 0 0 3px rgba(158, 20, 88, 0.15);
 }
 
 .input-mobile-group.input-error {
@@ -131,7 +131,7 @@
 
 .country-code-badge {
   padding: 13px 14px;
-  background-color: #F3EFF2;
+  background-color: var(--color-cream);
   border-right: 1.5px solid var(--color-border);
   font-size: 0.92rem;
   font-weight: 600;
@@ -173,8 +173,8 @@
 .auth-demo-assist {
   margin-top: 18px;
   padding: 10px 14px;
-  background-color: #FCF8FA;
-  border: 1px dashed rgba(199, 106, 145, 0.35);
+  background-color: var(--color-ivory);
+  border: 1px dashed rgba(214, 173, 85, 0.45);
   border-radius: var(--radius-sm);
   font-size: 0.8rem;
   color: var(--color-text-muted);
@@ -249,7 +249,7 @@
 .auth-form input:focus {
   border-color: var(--color-primary);
   background-color: var(--color-white);
-  box-shadow: 0 0 0 3px rgba(199, 106, 145, 0.12);
+  box-shadow: 0 0 0 3px rgba(158, 20, 88, 0.15);
 }
 
 .auth-form input.input-error {
@@ -356,13 +356,13 @@
   justify-content: center;
   gap: 8px;
   transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-  box-shadow: 0 4px 14px rgba(199, 106, 145, 0.28);
+  box-shadow: 0 4px 14px rgba(158, 20, 88, 0.28);
 }
 
 .auth-form .btn-auth-submit:hover {
   background-color: var(--color-primary-hover);
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(199, 106, 145, 0.38);
+  box-shadow: 0 6px 18px rgba(158, 20, 88, 0.38);
 }
 
 .auth-form .btn-auth-submit:active {
@@ -402,7 +402,7 @@
    ========================================================================== */
 .profile-section {
   padding: 44px 0 80px;
-  background: linear-gradient(180deg, #FDF9FA 0%, #F7F1F4 100%);
+  background: linear-gradient(180deg, var(--color-ivory) 0%, var(--color-cream) 100%);
   min-height: calc(100vh - 200px);
 }
 
@@ -417,8 +417,8 @@
 .profile-main-card {
   background-color: var(--color-white);
   border-radius: 16px;
-  border: 1px solid rgba(199, 106, 145, 0.16);
-  box-shadow: 0 10px 30px rgba(23, 19, 22, 0.05);
+  border: 1px solid rgba(214, 173, 85, 0.25);
+  box-shadow: 0 10px 30px rgba(41, 0, 24, 0.06);
   padding: 36px 40px;
 }
 
@@ -435,7 +435,7 @@
   width: 82px;
   height: 82px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary), #df9cb5);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
   color: var(--color-white);
   display: flex;
   align-items: center;
@@ -443,9 +443,9 @@
   font-family: var(--font-playfair);
   font-size: 2.2rem;
   font-weight: 700;
-  box-shadow: 0 6px 20px rgba(199, 106, 145, 0.35);
+  box-shadow: 0 6px 20px rgba(158, 20, 88, 0.35);
   border: 3px solid #fff;
-  outline: 2px solid rgba(199, 106, 145, 0.25);
+  outline: 2px solid rgba(214, 173, 85, 0.35);
   flex-shrink: 0;
   text-transform: uppercase;
 }
@@ -474,14 +474,14 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: linear-gradient(135deg, rgba(199, 106, 145, 0.08), rgba(197, 161, 91, 0.12));
+  background: linear-gradient(135deg, rgba(158, 20, 88, 0.08), rgba(214, 173, 85, 0.15));
   color: var(--color-primary-dark);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   padding: 4px 12px;
   border-radius: 20px;
-  border: 1px solid rgba(199, 106, 145, 0.25);
+  border: 1px solid rgba(214, 173, 85, 0.35);
 }
 
 .profile-card-title {
@@ -550,7 +550,7 @@
 .profile-form-grid input:focus {
   border-color: var(--color-primary);
   background-color: var(--color-white);
-  box-shadow: 0 0 0 3.5px rgba(199, 106, 145, 0.15);
+  box-shadow: 0 0 0 3.5px rgba(158, 20, 88, 0.15);
 }
 
 .profile-form-grid input.input-error {
@@ -560,8 +560,8 @@
 }
 
 .profile-form-grid input[readonly] {
-  background-color: #F5F1F3 !important;
-  border-color: #E6DFE3 !important;
+  background-color: var(--color-cream) !important;
+  border-color: var(--color-border) !important;
   color: var(--color-text-muted) !important;
   cursor: not-allowed;
 }
@@ -591,7 +591,7 @@
 .profile-form-grid .input-mobile-group:focus-within {
   border-color: var(--color-primary);
   background-color: var(--color-white);
-  box-shadow: 0 0 0 3.5px rgba(199, 106, 145, 0.15);
+  box-shadow: 0 0 0 3.5px rgba(158, 20, 88, 0.15);
 }
 
 .profile-form-grid .input-mobile-group.input-error {
@@ -602,7 +602,7 @@
 .profile-form-grid .country-code-badge {
   padding: 0 14px;
   height: 100%;
-  background-color: #F0EAEF;
+  background-color: var(--color-cream);
   border-right: 1.5px solid var(--color-border);
   font-size: 0.9rem;
   font-weight: 600;
@@ -657,14 +657,14 @@
   font-weight: 600;
   letter-spacing: 0.03em;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(199, 106, 145, 0.28);
+  box-shadow: 0 4px 14px rgba(158, 20, 88, 0.28);
   transition: all var(--transition-fast);
 }
 
 .btn-save-profile:hover {
-  background: linear-gradient(135deg, var(--color-primary-dark), #9a446a);
+  background: linear-gradient(135deg, var(--color-primary-dark), #730a3e);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(199, 106, 145, 0.38);
+  box-shadow: 0 6px 18px rgba(158, 20, 88, 0.38);
 }
 
 .profile-save-feedback-box {
@@ -684,8 +684,8 @@
 .profile-address-preview-box {
   margin-top: 34px;
   padding: 24px;
-  background: #FCFAFC;
-  border: 1px solid rgba(199, 106, 145, 0.16);
+  background: var(--color-ivory);
+  border: 1px solid rgba(214, 173, 85, 0.25);
   border-radius: var(--radius-md);
 }
 
@@ -722,8 +722,8 @@
 .profile-widget-card {
   background-color: var(--color-white);
   border-radius: 16px;
-  border: 1px solid rgba(199, 106, 145, 0.16);
-  box-shadow: 0 10px 30px rgba(23, 19, 22, 0.05);
+  border: 1px solid rgba(214, 173, 85, 0.25);
+  box-shadow: 0 10px 30px rgba(41, 0, 24, 0.06);
   padding: 26px 24px;
 }
 
@@ -749,8 +749,8 @@
 }
 
 .stat-tile {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FAF5F8 100%);
-  border: 1px solid rgba(199, 106, 145, 0.18);
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--color-ivory) 100%);
+  border: 1px solid rgba(214, 173, 85, 0.3);
   border-radius: 10px;
   padding: 16px 8px;
   text-align: center;
@@ -763,9 +763,9 @@
 }
 
 .stat-tile:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-gold);
   transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(199, 106, 145, 0.15);
+  box-shadow: 0 6px 14px rgba(158, 20, 88, 0.15);
 }
 
 .stat-tile-num {
@@ -804,15 +804,15 @@
   color: var(--color-dark);
   font-weight: 500;
   font-size: 0.92rem;
-  background-color: #FAF6F8;
-  border: 1px solid transparent;
+  background-color: var(--color-ivory);
+  border: 1px solid var(--color-border-light);
   text-decoration: none;
   transition: all var(--transition-fast);
 }
 
 .profile-menu-links li a:hover {
-  background-color: #FFF0F5;
-  border-color: rgba(199, 106, 145, 0.25);
+  background-color: var(--color-cream);
+  border-color: rgba(214, 173, 85, 0.4);
   color: var(--color-primary);
   transform: translateX(4px);
 }

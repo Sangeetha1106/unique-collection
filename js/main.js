@@ -14,8 +14,9 @@
 
   // Path resolution helper for relative links
   function isSubPage() {
-    return window.location.pathname.includes('/pages/') || 
-           window.location.href.includes('/pages/');
+    const p = (window.location.pathname || '').toLowerCase().replace(/\\/g, '/');
+    const h = (window.location.href || '').toLowerCase().replace(/\\/g, '/');
+    return p.includes('/pages/') || h.includes('/pages/');
   }
 
   function getPageUrl(pageFileName) {
@@ -23,7 +24,12 @@
   }
 
   function getRootUrl(fileName) {
-    return isSubPage() ? `../${fileName}` : fileName;
+    if (!fileName || typeof fileName !== 'string') return '';
+    if (fileName.startsWith('http://') || fileName.startsWith('https://') || fileName.startsWith('//') || fileName.startsWith('data:')) {
+      return fileName;
+    }
+    const cleanPath = fileName.replace(/^(\.\.\/)+/, '').replace(/^\.\//, '');
+    return isSubPage() ? `../${cleanPath}` : cleanPath;
   }
 
   /* =========================================================================
@@ -31,6 +37,7 @@
      ========================================================================= */
   document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
+    initNavDropdowns();
     initMobileNav();
     initSearchDrawer();
     initQuickViewModal();
@@ -43,8 +50,15 @@
     if (document.getElementById('clothing-category-grid')) {
       renderCategoryGrids();
     }
-    if (document.getElementById('new-arrivals-grid')) {
+    if (document.getElementById('new-arrivals-grid') || 
+        document.getElementById('best-sellers-grid') || 
+        document.getElementById('trending-grid')) {
       renderFeaturedProductSections();
+    }
+
+    // Shop with Styles page initializer (Reference Image 2)
+    if (document.getElementById('shop-styles-grid')) {
+      initShopWithStyles();
     }
 
     // Shop & Category listing page initializer
@@ -168,6 +182,61 @@
     const drawerLinks = overlay.querySelectorAll('a:not(.mobile-accordion-toggle)');
     drawerLinks.forEach(link => {
       link.addEventListener('click', closeDrawer);
+    });
+  }
+
+  /* =========================================================================
+     3b. Desktop & Tablet Dropdown Navigation Controller
+     ========================================================================= */
+  function initNavDropdowns() {
+    const dropdownItems = document.querySelectorAll('.nav-item.has-dropdown');
+
+    dropdownItems.forEach(item => {
+      const toggleLink = item.querySelector('.nav-link');
+      const dropdown = item.querySelector('.nav-dropdown');
+
+      if (!toggleLink || !dropdown) return;
+
+      // Click to toggle on desktop & touch laptops
+      toggleLink.addEventListener('click', (e) => {
+        const isOpen = item.classList.contains('dropdown-open');
+
+        // Close other dropdowns
+        dropdownItems.forEach(other => {
+          if (other !== item) {
+            other.classList.remove('dropdown-open');
+            const otherLink = other.querySelector('.nav-link');
+            if (otherLink) otherLink.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        if (!isOpen) {
+          e.preventDefault(); // First click reveals dropdown
+          item.classList.add('dropdown-open');
+          toggleLink.setAttribute('aria-expanded', 'true');
+        } else {
+          // Second click navigates to parent category page
+          item.classList.remove('dropdown-open');
+          toggleLink.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Mouse leave closes dropdown smoothly
+      item.addEventListener('mouseleave', () => {
+        item.classList.remove('dropdown-open');
+        toggleLink.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-item.has-dropdown')) {
+        dropdownItems.forEach(item => {
+          item.classList.remove('dropdown-open');
+          const toggleLink = item.querySelector('.nav-link');
+          if (toggleLink) toggleLink.setAttribute('aria-expanded', 'false');
+        });
+      }
     });
   }
 
@@ -435,9 +504,7 @@
     const sections = [
       { id: 'new-arrivals-grid', key: 'new-arrivals' },
       { id: 'best-sellers-grid', key: 'best-sellers' },
-      { id: 'trending-grid', key: 'trending' },
-      { id: 'anti-tarnish-grid', key: 'anti-tarnish' },
-      { id: 'gold-plated-grid', key: 'gold-plated' }
+      { id: 'trending-grid', key: 'trending' }
     ];
 
     sections.forEach(sec => {
@@ -464,15 +531,13 @@
     const productUrl = `${getPageUrl('product-details.html')}?id=${product.id}`;
     const isInStock = product.inStock !== false;
 
+    const prodImg = getRootUrl(product.image);
+
     card.innerHTML = `
       <div class="product-media">
         <a href="${productUrl}" class="product-media-link" aria-label="View ${product.name}">
-          <img src="${product.image}" alt="${product.name}" loading="lazy">
+          <img src="${prodImg}" alt="${product.name}" loading="lazy">
         </a>
-        
-        <span class="product-badge-flag ${product.discount ? 'sale' : 'gold'}">
-          ${product.badge || 'Demo Item'}
-        </span>
         
         <button type="button" class="btn-wishlist ${isWishlisted ? 'active' : ''}" aria-label="Add to wishlist" data-id="${product.id}">
           <svg class="wishlist-icon" viewBox="0 0 24 24">
@@ -563,6 +628,74 @@
   }
 
   /* =========================================================================
+     6b. Shop with Styles Controller (Reference Image 2)
+     ========================================================================= */
+  function initShopWithStyles() {
+    const grid = document.getElementById('shop-styles-grid');
+    if (!grid) return;
+
+    const cards = grid.querySelectorAll('.style-card');
+    const tabButtons = document.querySelectorAll('.styles-tab-btn[data-style-filter]');
+    const searchInput = document.getElementById('styles-search-input');
+    const emptyState = document.getElementById('styles-empty-state');
+    const resetSearchBtn = document.getElementById('reset-styles-search');
+
+    let currentTab = 'all';
+    let currentSearch = '';
+
+    function filterCards() {
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const group = card.getAttribute('data-group') || '';
+        const name = (card.getAttribute('data-name') || '').toLowerCase();
+
+        const matchesTab = (currentTab === 'all') || (group === currentTab);
+        const matchesSearch = !currentSearch || name.includes(currentSearch);
+
+        if (matchesTab && matchesSearch) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (emptyState) {
+        emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+    }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentTab = btn.getAttribute('data-style-filter') || 'all';
+        filterCards();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        currentSearch = e.target.value.trim().toLowerCase();
+        filterCards();
+      });
+    }
+
+    if (resetSearchBtn) {
+      resetSearchBtn.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        currentSearch = '';
+        currentTab = 'all';
+        tabButtons.forEach(b => {
+          if (b.getAttribute('data-style-filter') === 'all') b.classList.add('active');
+          else b.classList.remove('active');
+        });
+        filterCards();
+      });
+    }
+  }
+
+  /* =========================================================================
      7. Shop & Category Listing Page Controller (Filtering, Sorting, Load More)
      ========================================================================= */
   function initListingPage() {
@@ -649,11 +782,11 @@
     }
 
     // Check if group
-    if (normalized === 'clothing') {
-      heroTitle.textContent = "Women's Ethnic Wear & Essentials";
-      if (heroDesc) heroDesc.textContent = "Churidar sets, royal lehengas, pure cotton leggings, trendy shararas, and comfort innerwear.";
-      if (breadcrumbCurrent) breadcrumbCurrent.textContent = "Women's Clothing";
-      if (groupBadge) groupBadge.textContent = "Apparel Collection";
+    if (normalized === 'clothing' || normalized === 'collections') {
+      heroTitle.textContent = "Collections";
+      if (heroDesc) heroDesc.textContent = "Churidhar sets, royal lehengas, pure cotton leggings, trendy shararas, and comfort innerwear.";
+      if (breadcrumbCurrent) breadcrumbCurrent.textContent = "Collections";
+      if (groupBadge) groupBadge.textContent = "Collections";
     } else if (normalized === 'anti-tarnish') {
       heroTitle.textContent = "Anti-Tarnish Waterproof Jewellery";
       if (heroDesc) heroDesc.textContent = "18K PVD coated titanium steel bracelets, kadas, rings, anklets, and fancy bangles that resist water and sweat.";
@@ -1459,7 +1592,7 @@
     const viewFullLink = document.getElementById('qv-view-full-details');
     const modalAddBtn = document.getElementById('qv-add-cart-btn');
 
-    if (imgEl) imgEl.src = product.image;
+    if (imgEl) imgEl.src = (product.image && !product.image.startsWith('http') && !product.image.startsWith('../')) ? getRootUrl(product.image) : product.image;
     if (catEl) catEl.textContent = product.category;
     if (titleEl) titleEl.textContent = product.name;
     if (priceEl) priceEl.textContent = window.ProductService.formatPrice(product.price);
@@ -1583,7 +1716,7 @@
     const detailMainImg = document.getElementById('detail-main-img');
     const detailBadge = document.getElementById('detail-badge');
     const thumbnailsList = document.getElementById('detail-thumbnails-list');
-    const galleryImages = window.ProductService.getProductImages(product);
+    const galleryImages = (window.ProductService.getProductImages(product) || []).map(img => (img && !img.startsWith('http') && !img.startsWith('../')) ? getRootUrl(img) : img);
 
     if (detailBadge) {
       detailBadge.textContent = product.badge || 'Demo Item';
@@ -2147,7 +2280,7 @@
           <div class="cart-item-row" data-id="${item.id}" data-size="${item.size}" data-color="${item.color || ''}">
             <div class="cart-item-media">
               <a href="${detailsUrl}">
-                <img src="${item.image}" alt="${item.name}" loading="lazy">
+                <img src="${getRootUrl(item.image)}" alt="${item.name}" loading="lazy">
               </a>
             </div>
 
@@ -2499,7 +2632,7 @@
         const variantText = [item.size, item.color].filter(Boolean).join(' • ');
         itemLine.innerHTML = `
           <div class="mini-item-media">
-            <img src="${item.image}" alt="${item.name}">
+            <img src="${getRootUrl(item.image)}" alt="${item.name}">
             <span class="mini-item-qty-badge">${item.quantity || 1}</span>
           </div>
           <div class="mini-item-info">
@@ -2798,7 +2931,7 @@
       itemsRowsHtml += `
         <div class="confirm-item-row">
           <div class="confirm-item-media">
-            <img src="${item.image}" alt="${item.name}">
+            <img src="${getRootUrl(item.image)}" alt="${item.name}">
           </div>
           <div class="confirm-item-info">
             <span class="confirm-item-cat">${item.category || 'Collection'}</span>
@@ -3015,7 +3148,7 @@
       items.forEach(it => {
         itemsSummaryHtml += `
           <div class="order-hist-item">
-            <img src="${it.image}" alt="${it.name}" class="order-hist-img">
+            <img src="${getRootUrl(it.image)}" alt="${it.name}" class="order-hist-img">
             <div class="order-hist-info">
               <h4 class="order-hist-name">${it.name}</h4>
               <span class="order-hist-variant">Variant: ${it.size || 'Standard'} | Qty: ${it.quantity}</span>
@@ -3634,7 +3767,7 @@
           card.innerHTML = `
             <div class="wishlist-media-wrap">
               <a href="${detailUrl}">
-                <img src="${product.image}" alt="${product.name}" class="wishlist-img" loading="lazy">
+                <img src="${getRootUrl(product.image)}" alt="${product.name}" class="wishlist-img" loading="lazy">
               </a>
               <span class="wishlist-badge-pill">${categoryName}</span>
               <button type="button" class="btn-remove-wishlist-item" title="Remove from Wishlist" aria-label="Remove ${product.name} from wishlist">

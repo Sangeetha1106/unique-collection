@@ -13,20 +13,20 @@
     // Women's Clothing
     {
       id: 'cat-2pc-churidar',
-      name: '2-Piece Churidar Sets',
+      name: '2-Piece Churidhar Sets',
       slug: '2-piece-churidar-sets',
       group: 'clothing',
       badge: 'Classic Ethnic',
-      image: 'assets/images/categories/2-piece-churidar-sets.jpg',
+      image: 'assets/images/2piece-set/2piece-set.jpg',
       description: 'Handcrafted kurtis paired with matching comfortable bottoms. Perfect for office wear, casual gatherings, and daytime elegance.'
     },
     {
       id: 'cat-3pc-churidar',
-      name: '3-Piece Churidar Sets',
+      name: '3-Piece Churidhar Sets',
       slug: '3-piece-churidar-sets',
       group: 'clothing',
       badge: 'Festive Wear',
-      image: 'assets/images/categories/3-piece-churidar-sets.jpg',
+      image: 'assets/images/3piece-set/3piece-set.jpg',
       description: 'Complete festive ensembles with ornate dupattas, intricate zari borders, and regal silhouettes.'
     },
     {
@@ -64,6 +64,132 @@
       badge: 'Premium Comfort',
       image: 'assets/images/categories/womens-innerwear-panties.jpg',
       description: 'Ultra-soft, seam-free, breathable cotton innerwear crafted for hygiene and all-day ease.'
+    },
+    {
+      id: 'cat-offer-kurti',
+      name: 'Offer Kurti',
+      slug: 'offer-kurti',
+      group: 'clothing',
+      badge: 'Special Offer',
+      image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop&q=80',
+      description: 'Handpicked daily-wear and festive kurtis at limited-time promotional celebration prices.'
+    },
+    {
+      id: 'cat-premium-cord-sets',
+      name: 'Premium Cord Sets',
+      slug: 'premium-cord-sets',
+      group: 'clothing',
+      badge: 'Boutique Edit',
+      image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop&q=80',
+      description: 'Ultra-modern co-ord sets tailored in premium cotton and modal with tailored silhouettes.'
+    },
+    {
+      id: 'cat-grand-salwar-sets',
+      name: 'Grand Salwar Sets',
+      slug: 'grand-salwar-sets',
+      group: 'clothing',
+      badge: 'Festive Grandeur',
+      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&q=80',
+      description: 'Opulent salwar suits embellished with heavy zari, sequin borders, and organza dupattas.'
+    },
+    {
+      id: 'cat-straight-cut-pants',
+      name: 'Straight Cut Pants',
+      slug: 'straight-cut-pants',
+      group: 'clothing',
+      badge: 'Everyday Essential',
+      image: 'https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=800&auto=format&fit=crop&q=80',
+      description: 'Tailored comfort ankle-length cigarette and straight cut trousers with side pockets.'
+    },
+    {
+      id: 'cat-rayon-cord-sets',
+      name: 'Rayon cord sets',
+      slug: 'rayon-cord-sets',
+      group: 'clothing',
+      badge: 'Soft & Flowing',
+      image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&auto=format&fit=crop&q=80',
+      description: 'Breathable, feather-light rayon co-ord sets with contemporary prints for breezy elegance.'
+    },
+    {
+      id: 'cat-combo-cotton-cords',
+      name: 'Combo Cotton Cords',
+      slug: 'combo-cotton-cords',
+      group: 'clothing',
+      badge: 'Combo Saver',
+      image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop&q=80',
+      description: 'Curated bundle packs of pure cotton co-ord sets offering premium quality at exceptional value.'
+    },
+    {
+      id: 'cat-premium-kurtis',
+      name: 'Premium Kurtis',
+      slug: 'premium-kurtis',
+      group: 'clothing',
+      badge: 'Designer Quality',
+      image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop&q=80',
+      description: 'Artisanal designer kurtis with intricate neck detailing, fine fabrics, and royal cuts.'
+    },
+    {
+      id: 'cat-combo-cotton-salwar-sets',
+      name: 'Combo Cotton Salwar sets',
+      slug: 'combo-cotton-salwar-sets',
+      group: 'clothing',
+      badge: 'Value Pack',
+      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&q=80',
+      description: 'Smart combo sets of daily wear 100% cambric cotton salwar suits in complementary color tones.'
+    },
+    {
+      id: 'cat-top-shawl-combo',
+      name: 'Top Shawl Combo',
+      slug: 'top-shawl-combo',
+      group: 'clothing',
+      badge: 'Twin Set',
+      image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop&q=80',
+      description: 'Elegantly matched straight kurti tops with printed or woven shawls and stoles.'
+    },
+    {
+      id: 'cat-budget-friendly-salwar-set',
+      name: 'Budget Friendly Salwar Set',
+      slug: 'budget-friendly-salwar-set',
+      group: 'clothing',
+      badge: 'Pocket Friendly',
+      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&q=80',
+      description: 'Comfortable, durable cotton and blended salwar sets at accessible everyday prices.'
+    },
+    {
+      id: 'cat-299-kurtis',
+      name: '299 Kurtis',
+      slug: '299-kurtis',
+      group: 'clothing',
+      badge: 'Flat ₹299',
+      image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop&q=80',
+      description: 'Unbeatable value kurtis crafted from comfortable cotton and rayon, all priced at flat ₹299.'
+    },
+    {
+      id: 'cat-plus-size-collections',
+      name: 'Plus size collections',
+      slug: 'plus-size-collections',
+      group: 'clothing',
+      badge: 'Sizes 2XL - 6XL',
+      image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop&q=80',
+      description: 'Flattering ethnic silhouettes and stylish co-ords cut specifically for plus-size comfort.'
+    },
+    {
+      id: 'cat-feeding-collection',
+      name: 'Feeding collection',
+      slug: 'feeding-collection',
+      group: 'clothing',
+      badge: 'Maternity Friendly',
+      image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&auto=format&fit=crop&q=80',
+      description: 'Thoughtfully designed maternity and nursing kurtis with concealed zips and soft fabrics.'
+    },
+    {
+      id: 'cat-night-suits',
+      name: 'Night suits',
+      slug: 'night-suits',
+      group: 'clothing',
+      badge: 'Lounge & Sleep',
+      image: 'https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=800&auto=format&fit=crop&q=80',
+      description: 'Cozy, breathable 100% cotton nightwear and pajama sets for serene nighttime comfort.'
     },
 
     // Anti-Tarnish Jewellery
@@ -137,159 +263,81 @@
   // Demonstration Products Catalog
   const DEMO_PRODUCTS = [
     // -------------------------------------------------------------
-    // Category 1: 2-Piece Churidar Sets
+    // Category 1: 2-Piece Churidar Sets (Updated with Client Uploaded Image)
     // -------------------------------------------------------------
     {
       id: 'prod-2pc-01',
-      name: 'Sultana Chanderi 2-Piece Kurti Set',
+      name: 'Charcoal Floral Printed 2-Piece Kurti & Pant Set',
       category: '2-Piece Churidar Sets',
       categorySlug: '2-piece-churidar-sets',
       group: 'clothing',
       sections: ['trending', 'clothing'],
-      price: 1899,
-      originalPrice: 2999,
-      discount: '36% OFF',
-      image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop&q=80',
-      images: [
-        'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop&crop=top&q=80',
-        'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop&crop=bottom&q=80'
-      ],
-      badge: 'Trending',
-      sizes: ['M', 'L', 'XL', 'XXL'],
-      defaultSize: 'L',
-      color: 'Dusty Rose',
-      colors: ['Dusty Rose', 'Sage Mint', 'Powder Blue'],
-      inStock: true,
-      stockQuantity: 12,
-      rating: 4.8,
-      createdAt: '2026-10-20',
-      isDemo: true,
-      sku: 'UC-2PC-SULTANA',
-      material: 'Pure Chanderi Silk Blend Kurti with Cotton Silk Trousers',
-      care: 'Gentle hand wash cold or dry clean. Warm iron inside out. Do not bleach.',
-      details: [
-        'Calf-length straight kurti with delicate gold gota-patti neckline',
-        'Paired with matching elasticated cigarette trousers with pocket',
-        'Breathable cotton inner lining ensures day-long comfort',
-        'Traditional floral hand-block inspired metallic foil detailing'
-      ],
-      description: 'Dusty rose floral printed A-line kurti with matching cigarette pants in pure chanderi blend. Perfect for festive daytime gatherings and refined office wear.'
-    },
-    {
-      id: 'prod-2pc-02',
-      name: 'Gulmohar Handblock Cotton 2-Piece Set',
-      category: '2-Piece Churidar Sets',
-      categorySlug: '2-piece-churidar-sets',
-      group: 'clothing',
-      sections: ['clothing'],
-      price: 1499,
-      originalPrice: 2199,
-      discount: '31% OFF',
-      image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop&q=80',
-      images: [
-        'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop&crop=top&q=80',
-        'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop&crop=faces&q=80'
-      ],
-      badge: 'Pure Cotton',
-      sizes: ['S', 'M', 'L', 'XL'],
-      defaultSize: 'M',
-      color: 'Mustard Gold',
-      colors: ['Mustard Gold', 'Rust Maroon', 'Indigo Blue'],
-      inStock: true,
-      stockQuantity: 15,
-      rating: 4.6,
-      createdAt: '2026-10-18',
-      isDemo: true,
-      sku: 'UC-2PC-GULMOHAR',
-      material: '100% Premium Cambric Cotton (Bio-Washed)',
-      care: 'Machine wash cold with like colors. Line dry in shade. Warm iron.',
-      details: [
-        'Authentic Jaipur handblock prints crafted with azo-free dyes',
-        'Straight cut kurti featuring notched Mandarin collar & wooden buttons',
-        'Cropped comfort ankle-fit pants with elasticated back waist',
-        'Pre-washed and pre-shrunk for guaranteed zero shrinkage'
-      ],
-      description: 'Jaipuri handblock printed straight kurti paired with cropped ankle trousers. Crafted from breathable cambric cotton for effortless daily charm.'
-    },
-
-    // -------------------------------------------------------------
-    // Category 2: 3-Piece Churidar Sets
-    // -------------------------------------------------------------
-    {
-      id: 'prod-3pc-01',
-      name: 'Gulabi Zari 3-Piece Silk Churidar Set',
-      category: '3-Piece Churidar Sets',
-      categorySlug: '3-piece-churidar-sets',
-      group: 'clothing',
-      sections: ['new-arrivals', 'trending', 'clothing'],
-      price: 2899,
-      originalPrice: 4499,
+      price: 1299,
+      originalPrice: 1999,
       discount: '35% OFF',
-      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&q=80',
+      image: 'assets/images/2piece-set/2piece-set.jpg',
       images: [
-        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&crop=top&q=80',
-        'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&crop=center&q=80'
+        'assets/images/2piece-set/2piece-set.jpg'
       ],
       badge: 'New Arrival',
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
       defaultSize: 'M',
-      color: 'Rani Pink',
-      colors: ['Rani Pink', 'Royal Emerald', 'Deep Plum'],
+      color: 'Charcoal Navy & Ochre',
+      colors: ['Charcoal Navy & Ochre'],
       inStock: true,
-      stockQuantity: 9,
+      stockQuantity: 18,
       rating: 4.9,
-      createdAt: '2026-10-24',
+      createdAt: '2026-10-28',
       isDemo: true,
-      sku: 'UC-3PC-GULABI',
-      material: 'Chanderi Silk Kurti, Santoon Bottom & Banarasi Weave Organza Dupatta',
-      care: 'Dry clean recommended. Store folded inside a muslin cloth bag.',
+      sku: 'UC-2PC-CHARCOAL-SET',
+      material: 'Premium Breathable Cotton with Scallop Lace Hem Detailing',
+      care: 'Gentle hand wash cold or machine wash delicate. Warm iron inside out. Do not bleach.',
       details: [
-        'Complete festive 3-piece suit with embroidered kurti, churidar & dupatta',
-        'Rich antique gold zari weaving along 2.4m sheer organza dupatta',
-        'Tailored gather churidar bottom with adjustable drawstrings',
-        'Intricate hand-zardozi and mirror-work neckline embellishments'
+        'Straight cut calf-length kurti featuring elegant geometric diamond booti prints',
+        'Notched Mandarin slit neckline with matching drawstring tie and tassel accents',
+        'Long sleeves with delicate dark scallop lace border trim at cuffs',
+        'Paired with matching printed straight trousers with scallop lace bottom hem'
       ],
-      description: 'Premium chanderi silk kurti with hand-embroidered neckline, paired with traditional gather churidar and radiant Banarasi organza dupatta.'
+      description: 'Sophisticated charcoal navy and ochre geometric floral printed 2-piece kurti and straight trouser set. Expertly tailored in breathable soft cotton with intricate scallop lace borders.'
     },
+
+    // -------------------------------------------------------------
+    // Category 2: 3-Piece Churidar Sets (Updated with Client Uploaded Image)
+    // -------------------------------------------------------------
     {
-      id: 'prod-3pc-02',
-      name: 'Noorani Saffron Festive Anarkali 3-Piece',
+      id: 'prod-3pc-01',
+      name: 'Emerald Green Floral 3-Piece Pakistani Suit Set',
       category: '3-Piece Churidar Sets',
       categorySlug: '3-piece-churidar-sets',
       group: 'clothing',
-      sections: ['clothing', 'best-sellers'],
-      price: 3299,
-      originalPrice: 4999,
-      discount: '34% OFF',
-      image: 'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?w=800&auto=format&fit=crop&q=80',
+      sections: ['new-arrivals', 'trending', 'clothing'],
+      price: 2499,
+      originalPrice: 3899,
+      discount: '36% OFF',
+      image: 'assets/images/3piece-set/3piece-set.jpg',
       images: [
-        'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?w=800&auto=format&fit=crop&crop=top&q=80',
-        'https://images.unsplash.com/photo-1609357605129-26f69add5d6e?w=800&auto=format&fit=crop&crop=center&q=80'
+        'assets/images/3piece-set/3piece-set.jpg'
       ],
-      badge: 'Festive Pick',
-      sizes: ['M', 'L', 'XL'],
-      defaultSize: 'L',
-      color: 'Peach Gold',
-      colors: ['Peach Gold', 'Saffron Yellow', 'Blush Coral'],
+      badge: 'New Arrival',
+      sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+      defaultSize: 'M',
+      color: 'Emerald Green & Mustard Gold',
+      colors: ['Emerald Green & Mustard Gold'],
       inStock: true,
-      stockQuantity: 11,
-      rating: 4.7,
-      createdAt: '2026-10-14',
+      stockQuantity: 15,
+      rating: 4.9,
+      createdAt: '2026-10-28',
       isDemo: true,
-      sku: 'UC-3PC-NOORANI',
-      material: 'Chanderi Silk Flared Anarkali with Pure Shantoon Lining',
-      care: 'Dry clean only to maintain silk luster and golden borders.',
+      sku: 'UC-3PC-PAKISTANI-GREEN',
+      material: 'Pure Lawn Cotton Kurti & Pant with Matching Printed Dupatta',
+      care: 'Gentle hand wash cold or dry clean. Line dry in shade. Warm iron inside out.',
       details: [
-        'Dramatic 32-kali flared silhouette with broad hemline border',
-        'Micro-sequin and resham thread hand-embroidery on sweetheart yoke',
-        'Coordinated matching stretch churidar pants',
-        'Feather-light organza dupatta finished with gold scalloped lace'
+        'Straight cut emerald green printed kurti with intricate embroidered neck panel and floral booti work',
+        'Contrasting mustard gold printed full-length dupatta with ethnic geometric patterns',
+        'Matching emerald green straight trousers with embroidered bottom border detailing',
+        'Comfortable breathable premium fabric tailored for festive and wedding celebrations'
       ],
-      description: 'Radiant flared festive anarkali with woven Banarasi dupatta and matching stretch churidar. A showstopping ensemble for sangeets and celebrations.'
+      description: 'Stunning emerald green 3-piece Pakistani lawn suit set featuring a floral printed kurti with embellished neckline, contrasting mustard gold printed dupatta, and coordinated straight pants.'
     },
 
     // -------------------------------------------------------------
@@ -305,11 +353,9 @@
       price: 7999,
       originalPrice: 12999,
       discount: '38% OFF',
-      image: 'https://images.unsplash.com/photo-1594552072238-b8a33785b261?w=800&auto=format&fit=crop&q=80',
+      image: 'assets/images/categories/designer-lehengas.jpg',
       images: [
-        'https://images.unsplash.com/photo-1594552072238-b8a33785b261?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1594552072238-b8a33785b261?w=800&auto=format&fit=crop&crop=top&q=80',
-        'https://images.unsplash.com/photo-1594552072238-b8a33785b261?w=800&auto=format&fit=crop&crop=bottom&q=80'
+        'assets/images/categories/designer-lehengas.jpg'
       ],
       badge: 'Bridal Edit',
       sizes: ['S', 'M', 'L', 'Semi-Stitched'],
@@ -461,11 +507,9 @@
       price: 2499,
       originalPrice: 3899,
       discount: '36% OFF',
-      image: 'https://images.unsplash.com/photo-1518049362265-d5b2a6467637?w=800&auto=format&fit=crop&q=80',
+      image: 'assets/images/categories/trendy-sharara-sets.jpg',
       images: [
-        'https://images.unsplash.com/photo-1518049362265-d5b2a6467637?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1518049362265-d5b2a6467637?w=800&auto=format&fit=crop&crop=top&q=80',
-        'https://images.unsplash.com/photo-1518049362265-d5b2a6467637?w=800&auto=format&fit=crop&crop=bottom&q=80'
+        'assets/images/categories/trendy-sharara-sets.jpg'
       ],
       badge: 'Hot Pick',
       sizes: ['S', 'M', 'L', 'XL'],
@@ -617,11 +661,9 @@
       price: 1299,
       originalPrice: 1999,
       discount: '35% OFF',
-      image: 'https://images.unsplash.com/photo-1611591475878-1a5c689fef3f?w=800&auto=format&fit=crop&q=80',
+      image: 'assets/images/categories/bracelets-kadas.jpg',
       images: [
-        'https://images.unsplash.com/photo-1611591475878-1a5c689fef3f?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1611591475878-1a5c689fef3f?w=800&auto=format&fit=crop&crop=center&q=80',
-        'https://images.unsplash.com/photo-1611591475878-1a5c689fef3f?w=800&auto=format&fit=crop&crop=top&q=80'
+        'assets/images/categories/bracelets-kadas.jpg'
       ],
       badge: 'Waterproof',
       sizes: ['Standard 7"', 'Petite 6.5"'],
@@ -810,11 +852,9 @@
       price: 699,
       originalPrice: 1099,
       discount: '36% OFF',
-      image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&auto=format&fit=crop&q=80',
+      image: 'assets/images/categories/stylish-anklets-kolusu.jpg',
       images: [
-        'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&auto=format&fit=crop&crop=center&q=80',
-        'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&auto=format&fit=crop&crop=top&q=80'
+        'assets/images/categories/stylish-anklets-kolusu.jpg'
       ],
       badge: 'Modern Chic',
       sizes: ['Free Size (9" + 2" Extender)'],
@@ -888,11 +928,9 @@
       price: 1199,
       originalPrice: 1899,
       discount: '37% OFF',
-      image: 'https://images.unsplash.com/photo-1611591475878-1a5c689fef3f?w=800&auto=format&fit=crop&q=80',
+      image: 'assets/images/categories/fancy-bangles.jpg',
       images: [
-        'https://images.unsplash.com/photo-1611591475878-1a5c689fef3f?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1611591475878-1a5c689fef3f?w=800&auto=format&fit=crop&crop=center&q=80',
-        'https://images.unsplash.com/photo-1611591475878-1a5c689fef3f?w=800&auto=format&fit=crop&crop=top&q=80'
+        'assets/images/categories/fancy-bangles.jpg'
       ],
       badge: 'Statement',
       sizes: ['Size 2.4', 'Size 2.6', 'Size 2.8'],
@@ -929,11 +967,9 @@
       price: 1599,
       originalPrice: 2499,
       discount: '36% OFF',
-      image: 'https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=800&auto=format&fit=crop&q=80',
+      image: 'assets/images/categories/guaranteed-earrings-studs.jpg',
       images: [
-        'https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=800&auto=format&fit=crop&crop=top&q=80',
-        'https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=800&auto=format&fit=crop&crop=bottom&q=80'
+        'assets/images/categories/guaranteed-earrings-studs.jpg'
       ],
       badge: '1-Year Guarantee',
       sizes: ['Free Size (Earrings)'],
@@ -1007,11 +1043,9 @@
       price: 1899,
       originalPrice: 2999,
       discount: '37% OFF',
-      image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&auto=format&fit=crop&q=80',
+      image: 'assets/images/categories/gold-plated-chains.jpg',
       images: [
-        'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&auto=format&fit=crop&crop=center&q=80',
-        'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&auto=format&fit=crop&crop=top&q=80'
+        'assets/images/categories/gold-plated-chains.jpg'
       ],
       badge: '24K Gold Look',
       sizes: ['20 Inches', '24 Inches', '28 Inches'],
@@ -1085,11 +1119,9 @@
       price: 1799,
       originalPrice: 2899,
       discount: '38% OFF',
-      image: 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&auto=format&fit=crop&q=80',
+      image: 'assets/images/categories/premium-covering-bangles.jpg',
       images: [
-        'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&auto=format&fit=crop&q=80',
-        'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&auto=format&fit=crop&crop=center&q=80',
-        'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&auto=format&fit=crop&crop=top&q=80'
+        'assets/images/categories/premium-covering-bangles.jpg'
       ],
       badge: 'Heritage Matte',
       sizes: ['Pair (Size 2.4)', 'Pair (Size 2.6)', 'Pair (Size 2.8)'],
@@ -1148,6 +1180,248 @@
         '1-Year Covering Guarantee'
       ],
       description: 'Traditional Kerala Palakka leaf design covering bangles with emerald glass inlays and gold bead trim. 1-year plating guarantee.'
+    },
+
+    // -------------------------------------------------------------
+    // Additional Collection Categories from Reference
+    // -------------------------------------------------------------
+    {
+      id: 'prod-offer-kurti-01',
+      name: 'Floral Big Flower Daily Wear Kurti',
+      category: 'Offer Kurti',
+      categorySlug: 'offer-kurti',
+      group: 'clothing',
+      sections: ['clothing', 'offers'],
+      price: 199,
+      originalPrice: 499,
+      discount: '60% OFF',
+      image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop&q=80',
+      badge: 'Offer ₹199',
+      sizes: ['M', 'L', 'XL', 'XXL'],
+      color: 'Navy Blue & Floral',
+      inStock: true,
+      description: 'Breathable printed cotton daily kurti with contrast floral block print and notched neckline.'
+    },
+    {
+      id: 'prod-prem-cord-01',
+      name: 'Emerald Luxe Modal Co-Ord Set',
+      category: 'Premium Cord Sets',
+      categorySlug: 'premium-cord-sets',
+      group: 'clothing',
+      sections: ['clothing', 'trending'],
+      price: 1299,
+      originalPrice: 2199,
+      discount: '41% OFF',
+      image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop&q=80',
+      badge: 'Premium Cord',
+      sizes: ['S', 'M', 'L', 'XL'],
+      color: 'Emerald Green',
+      inStock: true,
+      description: 'Sophisticated 2-piece modal cord set featuring high-low shirt hem and matching ankle-length trousers.'
+    },
+    {
+      id: 'prod-grand-salwar-01',
+      name: 'Royal Zari Embroidered Grand Salwar Suit',
+      category: 'Grand Salwar Sets',
+      categorySlug: 'grand-salwar-sets',
+      group: 'clothing',
+      sections: ['clothing', 'new-arrivals'],
+      price: 2199,
+      originalPrice: 3499,
+      discount: '37% OFF',
+      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&q=80',
+      badge: 'Festive Grand',
+      sizes: ['M', 'L', 'XL', 'XXL'],
+      color: 'Plum & Antique Gold',
+      inStock: true,
+      description: 'Heavily embellished festive salwar suit with intricate zari neckline, flowy dupatta, and matching bottom.'
+    },
+    {
+      id: 'prod-straight-pants-01',
+      name: 'Comfort Fit Cotton Straight Cut Pants',
+      category: 'Straight Cut Pants',
+      categorySlug: 'straight-cut-pants',
+      group: 'clothing',
+      sections: ['clothing'],
+      price: 499,
+      originalPrice: 899,
+      discount: '44% OFF',
+      image: 'https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=800&auto=format&fit=crop&q=80',
+      badge: 'Everyday Essential',
+      sizes: ['M', 'L', 'XL', 'XXL', '3XL'],
+      color: 'Warm Ivory',
+      inStock: true,
+      description: 'Tailored 100% bio-wash cotton cigarette straight pants with deep side pockets and elasticated waistband.'
+    },
+    {
+      id: 'prod-rayon-cord-01',
+      name: 'Abstract Boho Rayon Co-Ord Set',
+      category: 'Rayon cord sets',
+      categorySlug: 'rayon-cord-sets',
+      group: 'clothing',
+      sections: ['clothing'],
+      price: 899,
+      originalPrice: 1499,
+      discount: '40% OFF',
+      image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&auto=format&fit=crop&q=80',
+      badge: 'Soft Rayon',
+      sizes: ['S', 'M', 'L', 'XL'],
+      color: 'Mustard Yellow',
+      inStock: true,
+      description: 'Featherlight rayon cord set with chic notch lapel collar and comfortable relaxed trousers.'
+    },
+    {
+      id: 'prod-combo-cords-01',
+      name: 'Twin Pack Cotton Co-Ord Value Combo',
+      category: 'Combo Cotton Cords',
+      categorySlug: 'combo-cotton-cords',
+      group: 'clothing',
+      sections: ['clothing', 'offers'],
+      price: 1599,
+      originalPrice: 2699,
+      discount: '41% OFF',
+      image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop&q=80',
+      badge: 'Pack of 2',
+      sizes: ['M', 'L', 'XL'],
+      color: 'Multi-Colour Combo',
+      inStock: true,
+      description: 'Value pack of two printed pure cotton co-ord sets crafted for effortless everyday style.'
+    },
+    {
+      id: 'prod-prem-kurti-01',
+      name: 'Handcrafted Chanderi Silk Premium Kurti',
+      category: 'Premium Kurtis',
+      categorySlug: 'premium-kurtis',
+      group: 'clothing',
+      sections: ['clothing', 'trending'],
+      price: 899,
+      originalPrice: 1599,
+      discount: '44% OFF',
+      image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop&q=80',
+      badge: 'Boutique Collection',
+      sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+      color: 'Wine Burgundy',
+      inStock: true,
+      description: 'Exquisite Chanderi silk kurti with delicate gold embroidery and comfortable inner lining.'
+    },
+    {
+      id: 'prod-combo-salwar-01',
+      name: 'Daily Wear Cotton Salwar Suit Combo (2 Sets)',
+      category: 'Combo Cotton Salwar sets',
+      categorySlug: 'combo-cotton-salwar-sets',
+      group: 'clothing',
+      sections: ['clothing', 'offers'],
+      price: 1799,
+      originalPrice: 2999,
+      discount: '40% OFF',
+      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&q=80',
+      badge: 'Combo 2-Pack',
+      sizes: ['M', 'L', 'XL', 'XXL'],
+      color: 'Teal & Peach',
+      inStock: true,
+      description: 'Smart combo of two 100% cambric cotton 3-piece salwar suits with matching dupattas.'
+    },
+    {
+      id: 'prod-top-shawl-01',
+      name: 'Embroidered Straight Kurti with Jacquard Shawl',
+      category: 'Top Shawl Combo',
+      categorySlug: 'top-shawl-combo',
+      group: 'clothing',
+      sections: ['clothing'],
+      price: 1199,
+      originalPrice: 1999,
+      discount: '40% OFF',
+      image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop&q=80',
+      badge: 'Top + Shawl',
+      sizes: ['M', 'L', 'XL', 'XXL'],
+      color: 'Deep Maroon',
+      inStock: true,
+      description: 'Warm, refined kurti top accompanied by a richly woven jacquard stole shawl.'
+    },
+    {
+      id: 'prod-budget-salwar-01',
+      name: 'Everyday Comfort Floral Cotton Salwar Set',
+      category: 'Budget Friendly Salwar Set',
+      categorySlug: 'budget-friendly-salwar-set',
+      group: 'clothing',
+      sections: ['clothing', 'offers'],
+      price: 699,
+      originalPrice: 1299,
+      discount: '46% OFF',
+      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&q=80',
+      badge: 'Budget Pick',
+      sizes: ['S', 'M', 'L', 'XL'],
+      color: 'Soft Coral',
+      inStock: true,
+      description: 'High-comfort, durable cotton salwar set designed for daily wear and relaxed elegance.'
+    },
+    {
+      id: 'prod-299-kurti-01',
+      name: 'Vibrant Floral Daily Print Kurti (Flat ₹299)',
+      category: '299 Kurtis',
+      categorySlug: '299-kurtis',
+      group: 'clothing',
+      sections: ['clothing', 'offers'],
+      price: 299,
+      originalPrice: 699,
+      discount: '57% OFF',
+      image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800&auto=format&fit=crop&q=80',
+      badge: 'Flat ₹299',
+      sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+      color: 'Indigo Blue',
+      inStock: true,
+      description: 'Soft bio-wash cambric cotton kurti with delicate contrast trims at unbeatable value.'
+    },
+    {
+      id: 'prod-plus-size-01',
+      name: 'Flattering Tiered Plus Size Ethnic Kurti',
+      category: 'Plus size collections',
+      categorySlug: 'plus-size-collections',
+      group: 'clothing',
+      sections: ['clothing'],
+      price: 799,
+      originalPrice: 1499,
+      discount: '47% OFF',
+      image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800&auto=format&fit=crop&q=80',
+      badge: 'Sizes 2XL-6XL',
+      sizes: ['XXL', '3XL', '4XL', '5XL'],
+      color: 'Royal Blue',
+      inStock: true,
+      description: 'Expertly tailored silhouette offering comfortable bust and hip ease with premium rayon drape.'
+    },
+    {
+      id: 'prod-feeding-01',
+      name: 'Maternity & Nursing Dual Zip Cotton Kurti',
+      category: 'Feeding collection',
+      categorySlug: 'feeding-collection',
+      group: 'clothing',
+      sections: ['clothing'],
+      price: 699,
+      originalPrice: 1299,
+      discount: '46% OFF',
+      image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&auto=format&fit=crop&q=80',
+      badge: 'Maternity Friendly',
+      sizes: ['M', 'L', 'XL', 'XXL'],
+      color: 'Pastel Lilac',
+      inStock: true,
+      description: 'Featuring two invisible concealed zippers on both sides for discreet and effortless nursing comfort.'
+    },
+    {
+      id: 'prod-night-suit-01',
+      name: 'Pure Cotton Notch Collar Lounge Night Suit',
+      category: 'Night suits',
+      categorySlug: 'night-suits',
+      group: 'clothing',
+      sections: ['clothing'],
+      price: 599,
+      originalPrice: 1099,
+      discount: '45% OFF',
+      image: 'https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=800&auto=format&fit=crop&q=80',
+      badge: '100% Cotton',
+      sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+      color: 'Blush Pink & Clouds',
+      inStock: true,
+      description: 'Ultra-soft cotton button-down night shirt with matching drawstring pajama trousers.'
     }
   ];
 
@@ -1259,6 +1533,32 @@
         'panties': 'womens-innerwear-panties',
         'womens-innerwear': 'womens-innerwear-panties',
 
+        // New Collection Categories from Reference
+        'offer-kurtis': 'offer-kurti',
+        'offer-kurti': 'offer-kurti',
+        'premium-cord-sets': 'premium-cord-sets',
+        'cord-sets': 'premium-cord-sets',
+        'grand-salwar-sets': 'grand-salwar-sets',
+        'salwar-sets': 'grand-salwar-sets',
+        'straight-cut-pants': 'straight-cut-pants',
+        'straight-pants': 'straight-cut-pants',
+        'rayon-cord-sets': 'rayon-cord-sets',
+        'combo-cotton-cords': 'combo-cotton-cords',
+        'premium-kurtis': 'premium-kurtis',
+        'premium-kurti': 'premium-kurtis',
+        'combo-cotton-salwar-sets': 'combo-cotton-salwar-sets',
+        'top-shawl-combo': 'top-shawl-combo',
+        'budget-friendly-salwar-set': 'budget-friendly-salwar-set',
+        'budget-salwar': 'budget-friendly-salwar-set',
+        '299-kurtis': '299-kurtis',
+        '299-kurti': '299-kurtis',
+        'plus-size-collections': 'plus-size-collections',
+        'plus-size': 'plus-size-collections',
+        'feeding-collection': 'feeding-collection',
+        'feeding': 'feeding-collection',
+        'night-suits': 'night-suits',
+        'night-suit': 'night-suits',
+
         // Anti-Tarnish Jewellery
         'bracelets': 'bracelets-kadas',
         'kadas': 'bracelets-kadas',
@@ -1289,6 +1589,8 @@
         'clothing-collection': 'clothing',
         'womens-clothing': 'clothing',
         'clothing': 'clothing',
+        'collections': 'clothing',
+        'collection': 'clothing',
         'jewellery': 'jewellery',
         'fine-jewellery': 'jewellery'
       };
