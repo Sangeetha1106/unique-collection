@@ -1159,7 +1159,7 @@ button {
   outline: none;
 }
 
-/* "SHOP JEWELLERY ->" hotspot mapped over button 1 */
+/* "SHOP JEWELLERY ->" legacy hotspot fallback */
 .hotspot-shop-jewellery {
   left: 8.2%;
   top: 76.2%;
@@ -1167,12 +1167,20 @@ button {
   height: 9.0%;
 }
 
-/* "EXPLORE COLLECTIONS ->" hotspot mapped over button 2 */
+/* "EXPLORE COLLECTIONS ->" hotspot accurately mapped over the button in Banner 1 */
 .hotspot-explore-collections {
-  left: 30.6%;
-  top: 76.2%;
-  width: 22.8%;
-  height: 9.0%;
+  left: 13.7%;
+  top: 80.2%;
+  width: 29.3%;
+  height: 10.1%;
+}
+
+/* "SHOP WOMEN'S WEAR ->" hotspot accurately mapped over the button in Banner 2 */
+.hotspot-shop-womenswear {
+  left: 8.7%;
+  top: 78.3%;
+  width: 20.8%;
+  height: 6.8%;
 }
 
 .hero-hotspot:hover {
