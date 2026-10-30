@@ -500,14 +500,18 @@ a[href^="tel:"] {
     flex-direction: row;
     gap: 10px;
     padding: 12px 14px;
-    background-color: var(--color-white);
+    background: linear-gradient(135deg, #290018 0%, #43001f 100%);
+    border-top: 1px solid rgba(214, 173, 85, 0.4);
+    border-bottom: 1px solid rgba(214, 173, 85, 0.4);
   }
 
+  .hero-mobile-cta-bar .btn-hero-primary,
+  .hero-mobile-cta-bar .btn-hero-secondary,
   .hero-mobile-cta-bar .btn-primary,
   .hero-mobile-cta-bar .btn-secondary {
     flex: 1;
     padding: 11px 12px;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     text-align: center;
     display: flex;
     align-items: center;

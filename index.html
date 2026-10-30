@@ -78,6 +78,8 @@
                             </a>
                             <div class="nav-dropdown dropdown-vertical" aria-label="Collections Submenu">
                                 <ul class="dropdown-menu-list">
+                                    <li><a href="pages/category.html?cat=new-arrivals" style="font-weight: 700; color: #d95368;">New Arrivals</a></li>
+                                    <li><a href="pages/category.html?cat=trending" style="font-weight: 700; color: #d95368;">Trending Now</a></li>
                                     <li><a href="pages/category.html?cat=2-piece-churidar-sets">2-Piece Churidhar Sets</a></li>
                                     <li><a href="pages/category.html?cat=3-piece-churidar-sets">3-Piece Churidhar Sets</a></li>
                                     <li><a href="pages/category.html?cat=designer-lehengas">Designer Lehengas</a></li>
@@ -209,6 +211,8 @@
                             Collections <span class="mobile-chevron">▼</span>
                         </a>
                         <ul class="mobile-sub-menu" id="sub-collections">
+                            <li><a href="pages/category.html?cat=new-arrivals" style="font-weight: 700; color: #d95368;">New Arrivals</a></li>
+                            <li><a href="pages/category.html?cat=trending" style="font-weight: 700; color: #d95368;">Trending Now</a></li>
                             <li><a href="pages/category.html?cat=2-piece-churidar-sets">2-Piece Churidhar Sets</a></li>
                             <li><a href="pages/category.html?cat=3-piece-churidar-sets">3-Piece Churidhar Sets</a></li>
                             <li><a href="pages/category.html?cat=designer-lehengas">Designer Lehengas</a></li>
@@ -275,91 +279,98 @@
     <main id="main-content">
 
         <!-- =====================================================================
-             3. Hero Banner Section (New Luxury Boutique Editorial Banner)
+             3. Hero Banner Section (Timeless Jewellery & Collections Showcase)
              ===================================================================== -->
-        <section class="hero-banner-luxury-section" aria-label="Luxury Ethnic Fashion & Fine Jewellery" id="hero-slider">
-            <div class="hero-luxury-stage">
-                <picture>
-                    <img src="assets/images/hero-luxury-banner.jpg" 
-                         alt="UNIQUE COLLECTION - Elegance in Every Detail - Royal Indian Ethnic Fashion & Fine Jewellery" 
-                         class="hero-luxury-img"
-                         width="1920" height="1080"
-                         fetchpriority="high"
-                         decoding="async">
-                </picture>
-
-                <!-- Editorial Content Overlay (Aligned to left decorative area) -->
-                <div class="hero-luxury-overlay">
-                    <div class="container hero-luxury-container">
-                        <div class="hero-luxury-content">
-                            <div class="hero-luxury-eyebrow">
-                                <span class="hero-sparkle">✦</span>
-                                <span>Elegance in Every Detail</span>
-                                <span class="hero-sparkle">✦</span>
-                            </div>
-
-                            <h1 class="hero-luxury-title">
-                                UNIQUE COLLECTION
-                            </h1>
-
-                            <p class="hero-luxury-desc">
-                                Discover beautiful ethnic wear and jewellery for every occasion.
-                            </p>
-
-                            <div class="hero-luxury-offer-pill">
-                                <span class="offer-sparkle">★</span>
-                                <span class="offer-text">SPECIAL OFFER – SAVE 10% TO 50% ON SELECTED COLLECTIONS</span>
-                                <span class="offer-sparkle">★</span>
-                            </div>
-
-                            <div class="hero-luxury-actions">
-                                <a href="pages/category.html?cat=clothing" class="btn-hero-primary" id="hero-btn-clothing">
-                                    Shop Clothing →
-                                </a>
-                                <a href="pages/category.html?cat=jewellery" class="btn-hero-secondary" id="hero-btn-jewellery">
-                                    Explore Jewellery →
-                                </a>
-                            </div>
+        <section class="hero-banner-luxury-section hero-slider-section" aria-label="Unique Collection Featured Banners" id="hero-slider">
+            <div class="hero-slider-wrapper">
+                <!-- Slide 1: Timeless Jewellery -->
+                <div class="hero-slide active" data-slide="0">
+                    <div class="hero-luxury-stage">
+                        <picture>
+                            <img src="assets/images/hero-banner.png?v=2" 
+                                 alt="UNIQUE COLLECTION - Shine with Timeless Jewellery - Antitarnish & Gold-Plated Collections, Flat 10% - 50% Off" 
+                                 class="hero-luxury-img"
+                                 width="1920" height="1080"
+                                 fetchpriority="high"
+                                 decoding="async">
+                        </picture>
+                        <!-- Interactive Hotspots positioned over graphic buttons in the banner -->
+                        <div class="hero-banner-hotspots" aria-label="Quick Actions">
+                            <a href="pages/category.html?cat=jewellery" 
+                               class="hero-hotspot hotspot-shop-jewellery" 
+                               title="Shop Jewellery" 
+                               aria-label="Shop Jewellery">
+                                <span class="sr-only">Shop Jewellery</span>
+                            </a>
+                            <a href="pages/shop.html" 
+                               class="hero-hotspot hotspot-explore-collections" 
+                               title="Explore Collections" 
+                               aria-label="Explore Collections">
+                                <span class="sr-only">Explore Collections</span>
+                            </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Slide 2: Elegance in Every Collection (Women's Ethnic Wear & Jewellery) -->
+                <div class="hero-slide" data-slide="1">
+                    <div class="hero-luxury-stage">
+                        <picture>
+                            <img src="assets/images/hero-banner-2.png?v=2" 
+                                 alt="UNIQUE COLLECTION - Elegance in Every Collection - Ethnic Wear and Jewellery, Flat 10% - 50% Off" 
+                                 class="hero-luxury-img"
+                                 width="1920" height="1080"
+                                 loading="lazy"
+                                 decoding="async">
+                        </picture>
+                        <!-- Interactive Hotspots positioned over graphic buttons in banner 2 -->
+                        <div class="hero-banner-hotspots" aria-label="Quick Actions">
+                            <a href="pages/category.html?cat=clothing" 
+                               class="hero-hotspot hotspot-shop-jewellery" 
+                               title="Shop Women's Wear" 
+                               aria-label="Shop Women's Wear">
+                                <span class="sr-only">Shop Women's Wear</span>
+                            </a>
+                            <a href="pages/category.html?cat=jewellery" 
+                               class="hero-hotspot hotspot-explore-collections" 
+                               title="Explore Jewellery" 
+                               aria-label="Explore Jewellery">
+                                <span class="sr-only">Explore Jewellery</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Navigation Arrows (Left & Right - Wild Wolven style) -->
+                <button type="button" class="hero-slider-arrow hero-arrow-prev" id="hero-slider-prev" aria-label="Previous Slide">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button type="button" class="hero-slider-arrow hero-arrow-next" id="hero-slider-next" aria-label="Next Slide">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+
+                <!-- Dots Indicator at bottom center (Wild Wolven style) -->
+                <div class="hero-slider-dots" role="tablist" aria-label="Hero Slides">
+                    <button type="button" class="hero-dot active" role="tab" aria-selected="true" aria-label="Slide 1" data-slide="0"></button>
+                    <button type="button" class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2" data-slide="1"></button>
+                </div>
             </div>
 
-            <!-- Mobile Action CTA Bar -->
+            <!-- Mobile Action CTA Bar for touch devices -->
             <div class="hero-mobile-cta-bar">
-                <a href="pages/category.html?cat=clothing" class="btn-hero-primary">
-                    Shop Clothing →
+                <a href="pages/category.html?cat=jewellery" class="btn-hero-primary" id="mobile-hero-btn-jewellery">
+                    Shop Jewellery →
                 </a>
-                <a href="pages/category.html?cat=jewellery" class="btn-hero-secondary">
-                    Explore Jewellery →
+                <a href="pages/category.html?cat=clothing" class="btn-hero-secondary" id="mobile-hero-btn-clothing">
+                    Shop Women's Wear →
                 </a>
             </div>
         </section>
 
-            <!-- Key Pillars Micro-Highlights Ribbon below full-size banner -->
-            <div class="hero-trust-ribbon">
-                <div class="container">
-                    <div class="hero-ribbon-grid">
-                        <div class="ribbon-item">
-                            <span class="ribbon-icon">✓</span>
-                            <span>100% Authentic Indian Craft</span>
-                        </div>
-                        <div class="ribbon-item">
-                            <span class="ribbon-icon">💧</span>
-                            <span>18K PVD Waterproof Anti-Tarnish</span>
-                        </div>
-                        <div class="ribbon-item">
-                            <span class="ribbon-icon">★</span>
-                            <span>1-Year Plating Guarantee</span>
-                        </div>
-                        <div class="ribbon-item">
-                            <span class="ribbon-icon">🚚</span>
-                            <span>Express Shipping Across India</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- =====================================================================
              Interactive Live Search Results Section (Dynamically revealed)
@@ -377,65 +388,32 @@
         </section>
 
         <!-- =====================================================================
-             4. Shop by Category - Women's Clothing
+             4. Our Collections (Client Style from Reference Image 2)
              ===================================================================== -->
-        <section class="section-padding" id="clothing-collection" aria-label="Women's Clothing Categories">
+        <section class="section-padding our-collections-section" id="our-collections" aria-label="Our Collections">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-eyebrow">Couture &amp; Comfort</span>
-                    <h2 class="section-title">Shop Women's Clothing</h2>
-                    <div class="section-divider"></div>
-                    <p class="section-desc">
-                        Explore timeless Indian silhouettes, intricate festive embroidery, and supreme daily cotton essentials.
-                    </p>
+                <div class="section-header text-center">
+                    <h2 class="our-collections-main-title">Our Collections</h2>
                 </div>
 
-                <!-- Clothing Categories Grid (6 Client Categories) -->
-                <div class="category-grid category-grid-6" id="clothing-category-grid">
-                    <!-- Dynamic rendering from js/products.js via js/main.js -->
+                <!-- Collections Grid: All collections with 1 representative product image, styled as Reference Image 2 -->
+                <div class="our-collections-grid" id="our-collections-grid">
+                    <!-- Populated dynamically by js/main.js -->
                 </div>
             </div>
         </section>
 
         <!-- =====================================================================
-             Shop by Category - Anti-Tarnish Jewellery
+             5. New Arrivals (Exact Same Style as Our Collections)
              ===================================================================== -->
-        <section class="section-padding bg-blush" id="jewellery-collection" aria-label="Anti-Tarnish Jewellery Categories">
+        <section class="section-padding our-collections-section" id="new-arrivals" aria-label="New Arrivals" style="background-color: #fff9fa;">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-eyebrow">Waterproof • Sweatproof • Hypoallergenic</span>
-                    <h2 class="section-title">Anti-Tarnish Jewellery</h2>
-                    <div class="section-divider"></div>
-                    <p class="section-desc">
-                        Engineered with premium surgical-grade 316L titanium steel &amp; 18K PVD gold coating.
-                        Wear in water, gym, or daily routine without losing shine.
-                    </p>
+                <div class="section-header text-center">
+                    <h2 class="our-collections-main-title">New Arrivals</h2>
                 </div>
 
-                <!-- Anti-Tarnish Categories Grid (4 Client Categories) -->
-                <div class="category-grid category-grid-4" id="anti-tarnish-category-grid">
-                    <!-- Dynamic rendering from js/products.js via js/main.js -->
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================================
-             Shop by Category - Gold-Plated & Covering Collection
-             ===================================================================== -->
-        <section class="section-padding" id="gold-plated-collection" aria-label="Gold-Plated & Covering Collection Categories">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-eyebrow">Heritage Elegance</span>
-                    <h2 class="section-title">Gold-Plated &amp; Covering Collection</h2>
-                    <div class="section-divider"></div>
-                    <p class="section-desc">
-                        Exquisite 1-gram micro gold-plated ornaments with traditional South Indian temple motifs and guaranteed luster.
-                    </p>
-                </div>
-
-                <!-- Gold-Plated Categories Grid (3 Client Categories) -->
-                <div class="category-grid category-grid-3" id="gold-plated-category-grid">
-                    <!-- Dynamic rendering from js/products.js via js/main.js -->
+                <div class="our-collections-grid" id="new-arrivals-grid">
+                    <!-- Populated dynamically by js/main.js -->
                 </div>
             </div>
         </section>
@@ -475,553 +453,16 @@
         </section>
 
         <!-- =====================================================================
-             5. Featured Products - Section 2: Best Sellers
-             ===================================================================== -->
-        <section class="section-padding" id="best-sellers" aria-label="Best Sellers">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-eyebrow">Customer Favorites</span>
-                    <h2 class="section-title">Best Sellers</h2>
-                    <div class="section-divider"></div>
-                    <p class="section-desc">
-                        Our most loved ethnic designs and customer-acclaimed anti-tarnish accessories.
-                    </p>
-                </div>
-
-                <div class="product-grid" id="best-sellers-grid">
-                    <!-- Product 1: Designer Lehenga -->
-                    <div class="product-card" data-id="prod-leh-01">
-                        <div class="product-media">
-                            <a href="pages/product-details.html?id=prod-leh-01" class="product-media-link" aria-label="View Noor Emerald Velvet Designer Lehenga">
-                                <img src="assets/images/categories/designer-lehengas.jpg" alt="Noor Emerald Velvet Designer Lehenga" loading="lazy">
-                            </a>
-                            <button type="button" class="btn-wishlist" aria-label="Add to wishlist" data-id="prod-leh-01">
-                                <svg class="wishlist-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                            </button>
-                        </div>
-                        <div class="product-content">
-                            <span class="stock-badge-tag in-stock">In Stock</span>
-                            <span class="product-category-tag">Designer Lehengas</span>
-                            <h3 class="product-name"><a href="pages/product-details.html?id=prod-leh-01">Noor Emerald Velvet Designer Lehenga</a></h3>
-                            <div class="product-pricing">
-                                <span class="price-current">₹7,999</span>
-                                <span class="price-original">₹12,999</span>
-                                <span class="price-discount-tag">38% OFF</span>
-                            </div>
-                            <div class="product-card-actions">
-                                <button type="button" class="btn-add-cart" data-id="prod-leh-01">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                    Add to Cart
-                                </button>
-                                <a href="pages/product-details.html?id=prod-leh-01" class="btn-view-card" aria-label="View Noor Emerald Velvet Designer Lehenga">View</a>
-                            </div>
-                            <span class="demo-tag">Demonstration Product</span>
-                        </div>
-                    </div>
-
-                    <!-- Product 2: Anti-Tarnish Tennis Bracelet -->
-                    <div class="product-card" data-id="prod-bra-01">
-                        <div class="product-media">
-                            <a href="pages/product-details.html?id=prod-bra-01" class="product-media-link" aria-label="View Celestial Dew Anti-Tarnish Tennis Bracelet">
-                                <img src="assets/images/categories/bracelets-kadas.jpg" alt="Celestial Dew Anti-Tarnish Tennis Bracelet" loading="lazy">
-                            </a>
-                            <button type="button" class="btn-wishlist" aria-label="Add to wishlist" data-id="prod-bra-01">
-                                <svg class="wishlist-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                            </button>
-                        </div>
-                        <div class="product-content">
-                            <span class="stock-badge-tag in-stock">In Stock</span>
-                            <span class="product-category-tag">Bracelets &amp; Kadas</span>
-                            <h3 class="product-name"><a href="pages/product-details.html?id=prod-bra-01">Celestial Dew Anti-Tarnish Tennis Bracelet</a></h3>
-                            <div class="product-pricing">
-                                <span class="price-current">₹1,299</span>
-                                <span class="price-original">₹1,999</span>
-                                <span class="price-discount-tag">35% OFF</span>
-                            </div>
-                            <div class="product-card-actions">
-                                <button type="button" class="btn-add-cart" data-id="prod-bra-01">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                    Add to Cart
-                                </button>
-                                <a href="pages/product-details.html?id=prod-bra-01" class="btn-view-card" aria-label="View Celestial Dew Anti-Tarnish Tennis Bracelet">View</a>
-                            </div>
-                            <span class="demo-tag">Demonstration Product</span>
-                        </div>
-                    </div>
-
-                    <!-- Product 3: Anti-Tarnish Bangle -->
-                    <div class="product-card" data-id="prod-ban-02">
-                        <div class="product-media">
-                            <a href="pages/product-details.html?id=prod-ban-02" class="product-media-link" aria-label="View Zircon Starlight Anti-Tarnish Open Bangle">
-                                <img src="assets/images/categories/fancy-bangles.jpg" alt="Zircon Starlight Anti-Tarnish Open Bangle" loading="lazy">
-                            </a>
-                            <button type="button" class="btn-wishlist" aria-label="Add to wishlist" data-id="prod-ban-02">
-                                <svg class="wishlist-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                            </button>
-                        </div>
-                        <div class="product-content">
-                            <span class="stock-badge-tag in-stock">In Stock</span>
-                            <span class="product-category-tag">Fancy Bangles</span>
-                            <h3 class="product-name"><a href="pages/product-details.html?id=prod-ban-02">Zircon Starlight Anti-Tarnish Open Bangle</a></h3>
-                            <div class="product-pricing">
-                                <span class="price-current">₹1,199</span>
-                                <span class="price-original">₹1,899</span>
-                                <span class="price-discount-tag">37% OFF</span>
-                            </div>
-                            <div class="product-card-actions">
-                                <button type="button" class="btn-add-cart" data-id="prod-ban-02">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                    Add to Cart
-                                </button>
-                                <a href="pages/product-details.html?id=prod-ban-02" class="btn-view-card" aria-label="View Zircon Starlight Anti-Tarnish Open Bangle">View</a>
-                            </div>
-                            <span class="demo-tag">Demonstration Product</span>
-                        </div>
-                    </div>
-
-                    <!-- Product 4: Gold Plated Jhumkas -->
-                    <div class="product-card" data-id="prod-gpe-01">
-                        <div class="product-media">
-                            <a href="pages/product-details.html?id=prod-gpe-01" class="product-media-link" aria-label="View Kundan Meenakari Handcrafted Jhumkas">
-                                <img src="assets/images/categories/guaranteed-earrings-studs.jpg" alt="Kundan Meenakari Handcrafted Jhumkas" loading="lazy">
-                            </a>
-                            <button type="button" class="btn-wishlist" aria-label="Add to wishlist" data-id="prod-gpe-01">
-                                <svg class="wishlist-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                            </button>
-                        </div>
-                        <div class="product-content">
-                            <span class="stock-badge-tag in-stock">In Stock</span>
-                            <span class="product-category-tag">Guaranteed Earrings / Studs</span>
-                            <h3 class="product-name"><a href="pages/product-details.html?id=prod-gpe-01">Kundan Meenakari Handcrafted Jhumkas</a></h3>
-                            <div class="product-pricing">
-                                <span class="price-current">₹1,599</span>
-                                <span class="price-original">₹2,499</span>
-                                <span class="price-discount-tag">36% OFF</span>
-                            </div>
-                            <div class="product-card-actions">
-                                <button type="button" class="btn-add-cart" data-id="prod-gpe-01">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                    Add to Cart
-                                </button>
-                                <a href="pages/product-details.html?id=prod-gpe-01" class="btn-view-card" aria-label="View Kundan Meenakari Handcrafted Jhumkas">View</a>
-                            </div>
-                            <span class="demo-tag">Demonstration Product</span>
-                        </div>
-                    </div>
-
-                    <!-- Product 5: Covering Bangles -->
-                    <div class="product-card" data-id="prod-gpb-01">
-                        <div class="product-media">
-                            <a href="pages/product-details.html?id=prod-gpb-01" class="product-media-link" aria-label="View Temple Lakshmi Matte Finish Covering Bangles">
-                                <img src="assets/images/categories/premium-covering-bangles.jpg" alt="Temple Lakshmi Matte Finish Covering Bangles" loading="lazy">
-                            </a>
-                            <button type="button" class="btn-wishlist" aria-label="Add to wishlist" data-id="prod-gpb-01">
-                                <svg class="wishlist-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                            </button>
-                        </div>
-                        <div class="product-content">
-                            <span class="stock-badge-tag in-stock">In Stock</span>
-                            <span class="product-category-tag">Premium Covering Bangles</span>
-                            <h3 class="product-name"><a href="pages/product-details.html?id=prod-gpb-01">Temple Lakshmi Matte Finish Covering Bangles</a></h3>
-                            <div class="product-pricing">
-                                <span class="price-current">₹1,799</span>
-                                <span class="price-original">₹2,899</span>
-                                <span class="price-discount-tag">38% OFF</span>
-                            </div>
-                            <div class="product-card-actions">
-                                <button type="button" class="btn-add-cart" data-id="prod-gpb-01">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                    Add to Cart
-                                </button>
-                                <a href="pages/product-details.html?id=prod-gpb-01" class="btn-view-card" aria-label="View Temple Lakshmi Matte Finish Covering Bangles">View</a>
-                            </div>
-                            <span class="demo-tag">Demonstration Product</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================================
              5. Featured Products - Section 3: Trending Now
              ===================================================================== -->
-        <section class="section-padding bg-blush" id="trending" aria-label="Trending Now">
+        <section class="section-padding our-collections-section" id="trending" aria-label="Trending Now">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-eyebrow">Viral &amp; Popular</span>
-                    <h2 class="section-title">Trending Now</h2>
-                    <div class="section-divider"></div>
-                    <p class="section-desc">
-                        Discover the season's most sought-after silhouettes, sharara sets, and artificial silver kolusu anklets.
-                    </p>
+                <div class="section-header text-center">
+                    <h2 class="our-collections-main-title">Trending Now</h2>
                 </div>
 
-                <div class="product-grid" id="trending-grid">
-                    <!-- Trending Product 1: 2-Piece Set -->
-                    <div class="product-card" data-id="prod-2pc-01">
-                        <div class="product-media">
-                            <a href="pages/product-details.html?id=prod-2pc-01" class="product-media-link" aria-label="View Charcoal Floral Printed 2-Piece Kurti &amp; Pant Set">
-                                <img src="assets/images/2piece-set/2piece-set.jpg" alt="Charcoal Floral Printed 2-Piece Kurti &amp; Pant Set" loading="lazy">
-                            </a>
-                            <button type="button" class="btn-wishlist" aria-label="Add to wishlist" data-id="prod-2pc-01">
-                                <svg class="wishlist-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                            </button>
-                        </div>
-                        <div class="product-content">
-                            <span class="stock-badge-tag in-stock">In Stock</span>
-                            <span class="product-category-tag">2-Piece Churidar Sets</span>
-                            <h3 class="product-name"><a href="pages/product-details.html?id=prod-2pc-01">Charcoal Floral Printed 2-Piece Kurti &amp; Pant Set</a></h3>
-                            <div class="product-pricing">
-                                <span class="price-current">₹1,299</span>
-                                <span class="price-original">₹1,999</span>
-                                <span class="price-discount-tag">35% OFF</span>
-                            </div>
-                            <div class="product-card-actions">
-                                <button type="button" class="btn-add-cart" data-id="prod-2pc-01">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                    Add to Cart
-                                </button>
-                                <a href="pages/product-details.html?id=prod-2pc-01" class="btn-view-card" aria-label="View Charcoal Floral Printed 2-Piece Kurti &amp; Pant Set">View</a>
-                            </div>
-                            <span class="demo-tag">Demonstration Product</span>
-                        </div>
-                    </div>
-
-                    <!-- Trending Product 2: 3-Piece Pakistani Suit Set -->
-                    <div class="product-card" data-id="prod-3pc-01">
-                        <div class="product-media">
-                            <a href="pages/product-details.html?id=prod-3pc-01" class="product-media-link" aria-label="View Emerald Green Floral 3-Piece Pakistani Suit Set">
-                                <img src="assets/images/3piece-set/3piece-set.jpg" alt="Emerald Green Floral 3-Piece Pakistani Suit Set" loading="lazy">
-                            </a>
-                            <button type="button" class="btn-wishlist" aria-label="Add to wishlist" data-id="prod-3pc-01">
-                                <svg class="wishlist-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                            </button>
-                        </div>
-                        <div class="product-content">
-                            <span class="stock-badge-tag in-stock">In Stock</span>
-                            <span class="product-category-tag">3-Piece Churidar Sets</span>
-                            <h3 class="product-name"><a href="pages/product-details.html?id=prod-3pc-01">Emerald Green Floral 3-Piece Pakistani Suit Set</a></h3>
-                            <div class="product-pricing">
-                                <span class="price-current">₹1,899</span>
-                                <span class="price-original">₹2,999</span>
-                                <span class="price-discount-tag">37% OFF</span>
-                            </div>
-                            <div class="product-card-actions">
-                                <button type="button" class="btn-add-cart" data-id="prod-3pc-01">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                    Add to Cart
-                                </button>
-                                <a href="pages/product-details.html?id=prod-3pc-01" class="btn-view-card" aria-label="View Emerald Green Floral 3-Piece Pakistani Suit Set">View</a>
-                            </div>
-                            <span class="demo-tag">Demonstration Product</span>
-                        </div>
-                    </div>
-
-                    <!-- Trending Product 3: Trendy Sharara Set -->
-                    <div class="product-card" data-id="prod-sha-01">
-                        <div class="product-media">
-                            <a href="pages/product-details.html?id=prod-sha-01" class="product-media-link" aria-label="View Aafreen Flared Georgette Sharara Set">
-                                <img src="assets/images/categories/trendy-sharara-sets.jpg" alt="Aafreen Flared Georgette Sharara Set" loading="lazy">
-                            </a>
-                            <button type="button" class="btn-wishlist" aria-label="Add to wishlist" data-id="prod-sha-01">
-                                <svg class="wishlist-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                            </button>
-                        </div>
-                        <div class="product-content">
-                            <span class="stock-badge-tag in-stock">In Stock</span>
-                            <span class="product-category-tag">Trendy Sharara Sets</span>
-                            <h3 class="product-name"><a href="pages/product-details.html?id=prod-sha-01">Aafreen Flared Georgette Sharara Set</a></h3>
-                            <div class="product-pricing">
-                                <span class="price-current">₹2,499</span>
-                                <span class="price-original">₹3,899</span>
-                                <span class="price-discount-tag">36% OFF</span>
-                            </div>
-                            <div class="product-card-actions">
-                                <button type="button" class="btn-add-cart" data-id="prod-sha-01">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                    Add to Cart
-                                </button>
-                                <a href="pages/product-details.html?id=prod-sha-01" class="btn-view-card" aria-label="View Aafreen Flared Georgette Sharara Set">View</a>
-                            </div>
-                            <span class="demo-tag">Demonstration Product</span>
-                        </div>
-                    </div>
-
-                    <!-- Trending Product 4: Stylish Anklet -->
-                    <div class="product-card" data-id="prod-ank-02">
-                        <div class="product-media">
-                            <a href="pages/product-details.html?id=prod-ank-02" class="product-media-link" aria-label="View Evil Eye Charm Anti-Tarnish Sleek Anklet">
-                                <img src="assets/images/categories/stylish-anklets-kolusu.jpg" alt="Evil Eye Charm Anti-Tarnish Sleek Anklet" loading="lazy">
-                            </a>
-                            <button type="button" class="btn-wishlist" aria-label="Add to wishlist" data-id="prod-ank-02">
-                                <svg class="wishlist-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                            </button>
-                        </div>
-                        <div class="product-content">
-                            <span class="stock-badge-tag in-stock">In Stock</span>
-                            <span class="product-category-tag">Stylish Anklets &amp; Kolusu</span>
-                            <h3 class="product-name"><a href="pages/product-details.html?id=prod-ank-02">Evil Eye Charm Anti-Tarnish Sleek Anklet</a></h3>
-                            <div class="product-pricing">
-                                <span class="price-current">₹699</span>
-                                <span class="price-original">₹1,099</span>
-                                <span class="price-discount-tag">36% OFF</span>
-                            </div>
-                            <div class="product-card-actions">
-                                <button type="button" class="btn-add-cart" data-id="prod-ank-02">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                    Add to Cart
-                                </button>
-                                <a href="pages/product-details.html?id=prod-ank-02" class="btn-view-card" aria-label="View Evil Eye Charm Anti-Tarnish Sleek Anklet">View</a>
-                            </div>
-                            <span class="demo-tag">Demonstration Product</span>
-                        </div>
-                    </div>
-
-                    <!-- Trending Product 5: Gold Plated Chain -->
-                    <div class="product-card" data-id="prod-gpc-01">
-                        <div class="product-media">
-                            <a href="pages/product-details.html?id=prod-gpc-01" class="product-media-link" aria-label="View Royal Heritage 24K Micro Gold-Plated Chain">
-                                <img src="assets/images/categories/gold-plated-chains.jpg" alt="Royal Heritage 24K Micro Gold-Plated Chain" loading="lazy">
-                            </a>
-                            <button type="button" class="btn-wishlist" aria-label="Add to wishlist" data-id="prod-gpc-01">
-                                <svg class="wishlist-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                            </button>
-                        </div>
-                        <div class="product-content">
-                            <span class="stock-badge-tag in-stock">In Stock</span>
-                            <span class="product-category-tag">Gold-Plated Chains</span>
-                            <h3 class="product-name"><a href="pages/product-details.html?id=prod-gpc-01">Royal Heritage 24K Micro Gold-Plated Chain</a></h3>
-                            <div class="product-pricing">
-                                <span class="price-current">₹1,899</span>
-                                <span class="price-original">₹2,999</span>
-                                <span class="price-discount-tag">37% OFF</span>
-                            </div>
-                            <div class="product-card-actions">
-                                <button type="button" class="btn-add-cart" data-id="prod-gpc-01">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                    Add to Cart
-                                </button>
-                                <a href="pages/product-details.html?id=prod-gpc-01" class="btn-view-card" aria-label="View Royal Heritage 24K Micro Gold-Plated Chain">View</a>
-                            </div>
-                            <span class="demo-tag">Demonstration Product</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================================
-             Anti-Tarnish & Gold-Plated Highlights Section
-             ===================================================================== -->
-        <section class="section-padding highlights-section" aria-label="Brand Craftsmanship Highlights">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-eyebrow">Uncompromising Quality</span>
-                    <h2 class="section-title">Why Choose Our Jewellery?</h2>
-                    <div class="section-divider"></div>
-                    <p class="section-desc">
-                        We blend contemporary metallurgic innovation with timeless Indian bridal artistry.
-                    </p>
-                </div>
-
-                <div class="highlights-grid">
-                    <!-- Card 1 -->
-                    <div class="highlight-box">
-                        <div class="highlight-icon-circle">💧</div>
-                        <h3>100% Anti-Tarnish &amp; Waterproof</h3>
-                        <p>
-                            Advanced 18K PVD physical vapor deposition coating ensures your bracelets, rings, and kadas will never fade or blacken in water, sweat, or perfume.
-                        </p>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="highlight-box">
-                        <div class="highlight-icon-circle">✨</div>
-                        <h3>1-Year Plating Guarantee</h3>
-                        <p>
-                            Our micro gold-plated covering studs, bangles, and chains are backed by our 1-year shine guarantee with authentic 24-karat look and feel.
-                        </p>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="highlight-box">
-                        <div class="highlight-icon-circle">🪡</div>
-                        <h3>Artisan Ethnic Tailoring</h3>
-                        <p>
-                            From comfortable pure cotton leggings to ornate zardozi festive lehengas, our ethnic wear is crafted with precision fits and breathable fabrics.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================================
-             Full-Width Promotional Banner 3: Anti-Tarnish & Fine Jewellery Spotlight
-             ===================================================================== -->
-        <section class="promo-banner-jewellery" id="jewellery-promo-banner" aria-label="Fine Jewellery Promotion">
-            <div class="container">
-                <div class="jewellery-promo-grid">
-                    <div class="jewellery-promo-content">
-                        <span class="jewellery-promo-eyebrow">✦ 100% Waterproof • Anti-Tarnish Luxury ✦</span>
-                        <h2>Engineered For Daily Grace, <span>Crafted For Royal Occasions</span></h2>
-                        <p>
-                            Indulge in 18K PVD gold-coated surgical titanium steel jewellery and 1-gram micro gold-plated temple ornaments. Wear them swimming, at workouts, or festive celebrations without tarnishing or loss of shine.
-                        </p>
-
-                        <div class="jewellery-features-row">
-                            <div class="jewellery-feature-pill">
-                                <span>💧</span>
-                                <span>Zero Tarnishing in Water</span>
-                            </div>
-                            <div class="jewellery-feature-pill">
-                                <span>🛡</span>
-                                <span>1-Year Plating Guarantee</span>
-                            </div>
-                            <div class="jewellery-feature-pill">
-                                <span>✨</span>
-                                <span>Hypoallergenic 316L Steel</span>
-                            </div>
-                        </div>
-
-                        <div class="jewellery-promo-cta-row">
-                            <a href="pages/category.html?cat=jewellery" class="btn-primary">
-                                SHOP ANTI-TARNISH JEWELLERY →
-                            </a>
-                            <a href="pages/category.html?cat=gold-plated-chains" class="btn-secondary" style="border-color: var(--color-gold); color: var(--color-gold);">
-                                VIEW GOLD-PLATED TREASURES
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="jewellery-promo-media">
-                        <div class="jewellery-promo-img-box">
-                            <img src="https://images.unsplash.com/photo-1611591475878-1a5c689fef3f?w=800&auto=format&fit=crop&q=80" 
-                                 alt="18K Anti-Tarnish Waterproof Jewellery - UNIQUE COLLECTION" 
-                                 loading="lazy">
-                            <div class="jewellery-promo-floating-tag">
-                                <strong>18K PVD GOLD</strong>
-                                <span>1-Year Guarantee</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- =====================================================================
-             Shopping Benefits Section (Configurable Placeholders)
-             ===================================================================== -->
-        <section class="section-padding-sm benefits-section" aria-label="Shopping Benefits">
-            <div class="container">
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🚚</div>
-                        <div class="benefit-info">
-                            <h4>Free Express Shipping</h4>
-                            <p>Complimentary delivery on eligible orders across India</p>
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🔄</div>
-                        <div class="benefit-info">
-                            <h4>7-Day Easy Exchange</h4>
-                            <p>Hassle-free size replacement and prompt customer care</p>
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🛡️</div>
-                        <div class="benefit-info">
-                            <h4>Guaranteed Authenticity</h4>
-                            <p>100% genuine craftsmanship and premium materials</p>
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div class="benefit-icon">💬</div>
-                        <div class="benefit-info">
-                            <h4>Personal Support</h4>
-                            <p>Dedicated customer support via phone and email</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================================
-             Instagram / Social Showcase Lookbook
-             ===================================================================== -->
-        <section class="section-padding" aria-label="Social Lookbook">
-            <div class="container">
-                <div class="section-header" style="margin-bottom: 32px;">
-                    <span class="section-eyebrow">#UniqueCollectionStyle</span>
-                    <h2 class="section-title">Follow Our Style Diary</h2>
-                    <div class="section-divider"></div>
-                    <p class="section-desc">
-                        Tag us in your festive ensembles and jewellery pairings to be featured in our royal gallery.
-                    </p>
-                </div>
-
-                <div class="instagram-grid">
-                    <div class="insta-card">
-                        <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=500&auto=format&fit=crop&q=80" alt="Ethnic Lookbook - UNIQUE COLLECTION" loading="lazy">
-                        <div class="insta-overlay">
-                            <span>📷</span>
-                            <p>@uniquecollection</p>
-                        </div>
-                    </div>
-                    <div class="insta-card">
-                        <img src="https://images.unsplash.com/photo-1611591475878-1a5c689fef3f?w=500&auto=format&fit=crop&q=80" alt="Anti-Tarnish Jewellery Pairing" loading="lazy">
-                        <div class="insta-overlay">
-                            <span>📷</span>
-                            <p>@uniquecollection</p>
-                        </div>
-                    </div>
-                    <div class="insta-card">
-                        <img src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?w=500&auto=format&fit=crop&q=80" alt="Bridal Lehenga Inspiration" loading="lazy">
-                        <div class="insta-overlay">
-                            <span>📷</span>
-                            <p>@uniquecollection</p>
-                        </div>
-                    </div>
-                    <div class="insta-card">
-                        <img src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=500&auto=format&fit=crop&q=80" alt="Gold-Plated Studs & Jhumkas" loading="lazy">
-                        <div class="insta-overlay">
-                            <span>📷</span>
-                            <p>@uniquecollection</p>
-                        </div>
-                    </div>
-                    <div class="insta-card">
-                        <img src="https://images.unsplash.com/photo-1518049362265-d5b2a6467637?w=500&auto=format&fit=crop&q=80" alt="Sharara Festive Look" loading="lazy">
-                        <div class="insta-overlay">
-                            <span>📷</span>
-                            <p>@uniquecollection</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================================
-             Newsletter Subscription Section
-             ===================================================================== -->
-        <section class="newsletter-section" aria-label="Newsletter Subscription">
-            <div class="container">
-                <div class="newsletter-box">
-                    <span class="section-eyebrow">Join Our Privileged Circle</span>
-                    <h2>Receive Exclusive Offers &amp; Previews</h2>
-                    <p>
-                        Subscribe to receive special festive coupons, new collection previews, and styling guides directly in your inbox.
-                    </p>
-
-                    <form class="newsletter-form" id="newsletter-form" novalidate>
-                        <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Enter your email address..." aria-label="Email address for newsletter" required>
-                        <button type="submit" class="newsletter-btn">Subscribe</button>
-                    </form>
-                    <div class="newsletter-feedback" id="newsletter-feedback"></div>
+                <div class="our-collections-grid" id="trending-grid">
+                    <!-- Populated dynamically by js/main.js -->
                 </div>
             </div>
         </section>

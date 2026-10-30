@@ -47,7 +47,7 @@
     if (document.getElementById('hero-slider')) {
       initHeroSlider();
     }
-    if (document.getElementById('clothing-category-grid')) {
+    if (document.getElementById('clothing-category-grid') || document.getElementById('our-collections-grid')) {
       renderCategoryGrids();
     }
     if (document.getElementById('new-arrivals-grid') || 
@@ -449,11 +449,19 @@
     if (!window.ProductService) return;
     const categories = window.ProductService.getCategories();
 
+    const ourCollectionsContainer = document.getElementById('our-collections-grid');
+    if (ourCollectionsContainer) {
+      ourCollectionsContainer.innerHTML = '';
+      categories.forEach(cat => {
+        ourCollectionsContainer.appendChild(createCollectionStyleCardElement(cat));
+      });
+    }
+
     const clothingContainer = document.getElementById('clothing-category-grid');
     if (clothingContainer) {
       clothingContainer.innerHTML = '';
       categories.filter(c => c.group === 'clothing').forEach(cat => {
-        clothingContainer.appendChild(createCategoryCardElement(cat));
+        clothingContainer.appendChild(createCollectionStyleCardElement(cat));
       });
     }
 
@@ -461,7 +469,7 @@
     if (antiTarnishContainer) {
       antiTarnishContainer.innerHTML = '';
       categories.filter(c => c.group === 'anti-tarnish').forEach(cat => {
-        antiTarnishContainer.appendChild(createCategoryCardElement(cat));
+        antiTarnishContainer.appendChild(createCollectionStyleCardElement(cat));
       });
     }
 
@@ -469,30 +477,62 @@
     if (goldPlatedContainer) {
       goldPlatedContainer.innerHTML = '';
       categories.filter(c => c.group === 'gold-plated').forEach(cat => {
-        goldPlatedContainer.appendChild(createCategoryCardElement(cat));
+        goldPlatedContainer.appendChild(createCollectionStyleCardElement(cat));
       });
     }
   }
 
-  function createCategoryCardElement(cat) {
-    const card = document.createElement('div');
-    card.className = 'category-card';
+  function createCollectionStyleCardElement(cat) {
+    const card = document.createElement('a');
+    card.className = 'collection-style-card';
     const catUrl = `${getPageUrl('category.html')}?cat=${encodeURIComponent(cat.slug)}`;
-    const catImg = (cat.image && !cat.image.startsWith('http')) ? getRootUrl(cat.image) : cat.image;
+    card.href = catUrl;
+    card.setAttribute('aria-label', `Explore ${cat.name}`);
+
+    // Get 1 product image for this collection
+    let displayImg = cat.image;
+    if (window.ProductService) {
+      const catProducts = window.ProductService.getProductsByCategory(cat.slug);
+      if (catProducts && catProducts.length > 0 && catProducts[0].image) {
+        displayImg = catProducts[0].image;
+      }
+    }
+    const catImg = (displayImg && !displayImg.startsWith('http')) ? getRootUrl(displayImg) : displayImg;
+
     card.innerHTML = `
-      <a href="${catUrl}" class="category-card-link-wrapper" aria-label="Explore ${cat.name}">
-        <div class="category-img-wrap">
-          <img src="${catImg}" alt="${cat.name} - UNIQUE COLLECTION" loading="lazy">
+      <div class="collection-style-card-media">
+        <img src="${catImg}" alt="${cat.name} - UNIQUE COLLECTION" loading="lazy">
+      </div>
+      <div class="collection-style-card-footer">
+        <h3 class="collection-style-card-title">${cat.name}</h3>
+      </div>
+    `;
+    return card;
+  }
+
+  function createCategoryCardElement(cat) {
+    return createCollectionStyleCardElement(cat);
+  }
+
+  function createProductCollectionStyleCardElement(product) {
+    const card = document.createElement('a');
+    card.className = 'collection-style-card';
+    const productUrl = `${getPageUrl('product-details.html')}?id=${encodeURIComponent(product.id)}`;
+    card.href = productUrl;
+    card.setAttribute('aria-label', `View ${product.name}`);
+
+    const prodImg = (product.image && !product.image.startsWith('http')) ? getRootUrl(product.image) : product.image;
+
+    card.innerHTML = `
+      <div class="collection-style-card-media">
+        <img src="${prodImg}" alt="${product.name} - UNIQUE COLLECTION" loading="lazy">
+      </div>
+      <div class="collection-style-card-footer">
+        <h3 class="collection-style-card-title">${product.name}</h3>
+        <div class="collection-style-card-price">
+          <span class="price-current">₹${Number(product.price).toLocaleString('en-IN')}</span>
+          ${product.originalPrice ? `<span class="price-original">₹${Number(product.originalPrice).toLocaleString('en-IN')}</span>` : ''}
         </div>
-      </a>
-      <div class="category-info">
-        <div>
-          <h3 class="category-name"><a href="${catUrl}" style="color: inherit; text-decoration: none;">${cat.name}</a></h3>
-          <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.4; margin-bottom: 8px;">${cat.description || ''}</p>
-        </div>
-        <a href="${catUrl}" class="category-explore-link">
-          Explore Collection →
-        </a>
       </div>
     `;
     return card;
@@ -512,7 +552,7 @@
         container.innerHTML = '';
         const products = window.ProductService.getProductsBySection(sec.key);
         products.forEach(prod => {
-          container.appendChild(createProductCardElement(prod));
+          container.appendChild(createProductCollectionStyleCardElement(prod));
         });
       }
     });
@@ -801,6 +841,18 @@
       if (heroDesc) heroDesc.textContent = "Explore our waterproof anti-tarnish and authentic gold-covering jewellery edits.";
       if (breadcrumbCurrent) breadcrumbCurrent.textContent = "Jewellery";
       if (groupBadge) groupBadge.textContent = "Jewellery Catalog";
+    } else if (normalized === 'new-arrivals') {
+      heroTitle.textContent = "New Arrivals";
+      if (heroDesc) heroDesc.textContent = "Explore our latest handcrafted festive kurtis, lehengas, and anti-tarnish everyday jewellery.";
+      if (breadcrumbCurrent) breadcrumbCurrent.textContent = "New Arrivals";
+      if (groupBadge) groupBadge.textContent = "Fresh In";
+      document.title = "New Arrivals | UNIQUE COLLECTION";
+    } else if (normalized === 'trending' || normalized === 'trending-now') {
+      heroTitle.textContent = "Trending Now";
+      if (heroDesc) heroDesc.textContent = "Discover what is trending: customer-acclaimed ethnic ensembles and viral anti-tarnish jewellery.";
+      if (breadcrumbCurrent) breadcrumbCurrent.textContent = "Trending Now";
+      if (groupBadge) groupBadge.textContent = "Most Popular";
+      document.title = "Trending Now | UNIQUE COLLECTION";
     } else {
       // Specific Category Slug
       const categoryObj = window.ProductService.getCategoryBySlug(normalized);

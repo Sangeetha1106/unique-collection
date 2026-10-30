@@ -1105,12 +1105,13 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   7b. New Luxury Homepage Hero Banner (Deep Burgundy & Champagne Gold)
+   7b. Homepage Hero Banner (Shine with Timeless Jewellery & Collections)
    -------------------------------------------------------------------------- */
 .hero-banner-luxury-section {
   width: 100%;
   position: relative;
-  background-color: var(--color-burgundy);
+  background-color: #dbbdb5;
+  background: linear-gradient(135deg, #e4beba 0%, #dbbdb5 50%, #cfa098 100%);
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -1120,11 +1121,11 @@ button {
 .hero-luxury-stage {
   position: relative;
   width: 100%;
-  min-height: 560px;
-  max-height: 700px;
-  display: flex;
-  align-items: center;
-  background-color: var(--color-plum);
+  max-width: 1920px;
+  margin: 0 auto;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 
 .hero-luxury-stage picture {
@@ -1136,96 +1137,52 @@ button {
 .hero-luxury-img {
   width: 100%;
   height: 100%;
-  min-height: 560px;
-  max-height: 700px;
-  object-fit: cover;
-  object-position: right center;
   display: block;
+  object-fit: cover;
+  object-position: center center;
 }
 
-.hero-luxury-overlay {
+/* Interactive Hotspots positioned directly over banner graphic buttons */
+.hero-banner-hotspots {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(90deg, rgba(41, 0, 24, 0.94) 0%, rgba(67, 0, 31, 0.85) 36%, rgba(67, 0, 31, 0.35) 55%, transparent 100%);
+  pointer-events: none;
   z-index: 5;
 }
 
-.hero-luxury-container {
-  width: 100%;
+.hero-hotspot {
+  position: absolute;
+  pointer-events: auto;
+  cursor: pointer;
+  border-radius: 9999px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  outline: none;
 }
 
-.hero-luxury-content {
-  max-width: 580px;
-  padding: 40px 0;
-  text-align: left;
+/* "SHOP JEWELLERY ->" hotspot mapped over button 1 */
+.hotspot-shop-jewellery {
+  left: 8.2%;
+  top: 76.2%;
+  width: 21.2%;
+  height: 9.0%;
 }
 
-.hero-luxury-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-size: 1.2rem;
-  color: var(--color-gold);
-  letter-spacing: 0.08em;
-  margin-bottom: 12px;
+/* "EXPLORE COLLECTIONS ->" hotspot mapped over button 2 */
+.hotspot-explore-collections {
+  left: 30.6%;
+  top: 76.2%;
+  width: 22.8%;
+  height: 9.0%;
 }
 
-.hero-sparkle {
-  color: var(--color-gold);
-  font-size: 0.95rem;
+.hero-hotspot:hover {
+  transform: scale(1.02);
+  background-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 4px 22px rgba(191, 67, 104, 0.45);
 }
 
-.hero-luxury-title {
-  font-family: var(--font-heading);
-  font-size: 3.6rem;
-  font-weight: 700;
-  color: var(--color-cream);
-  line-height: 1.1;
-  letter-spacing: 0.04em;
-  margin-bottom: 16px;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-}
-
-.hero-luxury-desc {
-  font-size: 1.12rem;
-  color: var(--color-ivory);
-  line-height: 1.6;
-  margin-bottom: 24px;
-  max-width: 490px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-.hero-luxury-offer-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(41, 0, 24, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1.5px solid var(--color-gold);
-  border-radius: var(--radius-sm);
-  padding: 10px 18px;
-  color: var(--color-gold);
-  font-size: 0.86rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
-}
-
-.offer-sparkle {
-  color: var(--color-gold);
-}
-
-.hero-luxury-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
+.hero-hotspot:active {
+  transform: scale(0.99);
 }
 
 .btn-hero-primary {
@@ -1235,11 +1192,11 @@ button {
   gap: 8px;
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 14px 32px;
+  padding: 13px 28px;
   border-radius: var(--radius-full);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   box-shadow: 0 4px 18px rgba(158, 20, 88, 0.35);
   transition: all var(--transition-fast);
@@ -1263,11 +1220,11 @@ button {
   -webkit-backdrop-filter: blur(6px);
   color: var(--color-cream);
   border: 1.5px solid var(--color-gold);
-  padding: 13px 30px;
+  padding: 12px 26px;
   border-radius: var(--radius-full);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   transition: all var(--transition-fast);
   text-decoration: none;
@@ -1280,10 +1237,14 @@ button {
   box-shadow: var(--shadow-gold);
 }
 
-/* Backward compatibility for slider elements if referenced */
+/* --------------------------------------------------------------------------
+   Hero Banner Carousel Slider (Wild Wolven Style Left/Right Arrows & Dots)
+   -------------------------------------------------------------------------- */
 .hero-slider-section {
   position: relative;
   width: 100%;
+  overflow: hidden;
+  user-select: none;
 }
 
 .hero-slider-wrapper {
@@ -1296,12 +1257,150 @@ button {
   display: none;
   opacity: 0;
   width: 100%;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .hero-slide.active {
   display: block;
   opacity: 1;
+  animation: heroSlideFade 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes heroSlideFade {
+  0% {
+    opacity: 0;
+    transform: scale(1.008);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Left & Right Circular Navigation Arrows */
+.hero-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(28, 12, 22, 0.62);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  padding: 0;
+}
+
+.hero-slider-arrow svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.hero-arrow-prev {
+  left: 24px;
+}
+
+.hero-arrow-next {
+  right: 24px;
+}
+
+.hero-slider-arrow:hover {
+  background: rgba(158, 20, 88, 0.92);
+  border-color: #d4ad55;
+  color: #f7e7ce;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 22px rgba(158, 20, 88, 0.55);
+}
+
+.hero-slider-arrow:hover svg {
+  transform: scale(1.1);
+}
+
+.hero-slider-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+/* Bottom Center Dots Indicator Bar */
+.hero-slider-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(24, 10, 18, 0.58);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.hero-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.hero-dot:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: scale(1.15);
+}
+
+.hero-dot.active {
+  width: 26px;
+  border-radius: 6px;
+  background: #d4ad55;
+  box-shadow: 0 0 10px rgba(212, 173, 85, 0.7);
+}
+
+@media (max-width: 768px) {
+  .hero-slider-arrow {
+    width: 38px;
+    height: 38px;
+  }
+  .hero-slider-arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+  .hero-arrow-prev {
+    left: 10px;
+  }
+  .hero-arrow-next {
+    right: 10px;
+  }
+  .hero-slider-dots {
+    bottom: 12px;
+    padding: 4px 10px;
+    gap: 6px;
+  }
+  .hero-dot {
+    width: 7px;
+    height: 7px;
+  }
+  .hero-dot.active {
+    width: 20px;
+  }
 }
 
 .sr-only {
@@ -1326,11 +1425,13 @@ button {
   border-bottom: 1px solid rgba(214, 173, 85, 0.35);
 }
 
+.hero-mobile-cta-bar .btn-hero-primary,
+.hero-mobile-cta-bar .btn-hero-secondary,
 .hero-mobile-cta-bar .btn-primary,
 .hero-mobile-cta-bar .btn-secondary {
   flex: 1;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   padding: 12px 16px;
 }
 
@@ -2498,11 +2599,12 @@ button {
    19. Shop & Category Pages - Breadcrumbs, Filters, & Listing
    ========================================================================== */
 
-/* Breadcrumb Navigation */
+/* Breadcrumb Navigation - Soft Luxury Blush matching Homepage Banner */
 .breadcrumb-nav {
-  padding: 16px 0;
-  background-color: var(--color-white);
-  border-bottom: 1px solid var(--color-border-light);
+  padding: 14px 0;
+  background: #fdf6f5;
+  background: linear-gradient(135deg, #fdf6f5 0%, #faedea 100%);
+  border-bottom: 1px solid rgba(214, 173, 85, 0.28);
   font-size: 0.85rem;
 }
 
@@ -2516,11 +2618,12 @@ button {
 .breadcrumb-item {
   display: inline-flex;
   align-items: center;
-  color: var(--color-text-muted);
+  color: #7a5060;
 }
 
 .breadcrumb-item a {
-  color: var(--color-text-muted);
+  color: #7a5060;
+  font-weight: 500;
   transition: color var(--transition-fast);
 }
 
@@ -2530,47 +2633,50 @@ button {
 
 .breadcrumb-separator {
   margin: 0 6px;
-  color: var(--color-border);
+  color: #caa1ad;
   font-size: 0.75rem;
 }
 
 .breadcrumb-item.active {
   color: var(--color-primary);
-  font-weight: 600;
+  font-weight: 700;
 }
 
-/* Page Hero Banner for Shop & Categories */
+/* Page Hero Banner - Light Luxury Blush matching Homepage Banner */
 .page-hero-banner {
-  background: linear-gradient(135deg, var(--color-ivory) 0%, var(--color-cream) 100%);
-  padding: 44px 0 48px;
-  border-bottom: 1px solid rgba(214, 173, 85, 0.35);
+  background: #faedea;
+  background: linear-gradient(135deg, #fdf6f5 0%, #f7eae7 45%, #f1dbd7 100%);
+  padding: 44px 0 46px;
+  border-bottom: 2px solid var(--color-gold);
   text-align: center;
   position: relative;
 }
 
 .page-hero-banner .category-group-badge {
   display: inline-block;
-  background-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.95);
   color: var(--color-primary);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 4px 14px;
+  padding: 5px 16px;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(214, 173, 85, 0.4);
+  border: 1px solid rgba(214, 173, 85, 0.6);
+  box-shadow: 0 2px 10px rgba(158, 20, 88, 0.08);
   margin-bottom: 12px;
 }
 
 .page-hero-title {
-  font-size: 2.5rem;
-  color: var(--color-dark);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  color: #2b081c;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 .page-hero-desc {
   font-size: 1rem;
-  color: var(--color-text-muted);
+  color: #5f3f4c;
   max-width: 680px;
   margin: 0 auto;
 }
@@ -2606,10 +2712,11 @@ button {
 }
 
 .shop-styles-hero-banner {
-  background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-burgundy) 100%);
+  background: #faedea;
+  background: linear-gradient(135deg, #fdf6f5 0%, #f7eae7 45%, #f1dbd7 100%);
   padding: 44px 0 32px;
   border-bottom: 2px solid var(--color-gold);
-  color: var(--color-white);
+  color: #2b081c;
   position: relative;
   text-align: center;
 }
@@ -2622,22 +2729,22 @@ button {
 .shop-styles-title {
   font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
   font-size: clamp(2.2rem, 3.8vw, 3rem);
-  font-weight: 600;
-  color: #FFFFFF !important;
+  font-weight: 700;
+  color: #2b081c !important;
   margin: 0 0 8px 0;
   letter-spacing: -0.01em;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 .shop-styles-accent {
-  color: var(--color-gold, #D6AD55) !important;
+  color: #b88628 !important;
   font-style: italic;
   font-weight: 700;
 }
 
 .shop-styles-desc {
   font-size: 0.98rem;
-  color: #dfd8dc;
+  color: #5f3f4c;
   margin: 0 auto;
   max-width: 620px;
 }
@@ -2662,9 +2769,9 @@ button {
 }
 
 .styles-tab-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(214, 173, 85, 0.4);
-  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid rgba(158, 20, 88, 0.22);
+  color: #4a2436;
   font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 600;
@@ -2672,40 +2779,42 @@ button {
   border-radius: 999px;
   cursor: pointer;
   transition: all 0.25s ease;
-  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .styles-tab-btn:hover {
-  border-color: var(--color-gold, #D6AD55);
-  background: rgba(214, 173, 85, 0.22);
-  color: var(--color-gold-light, #faeccf);
+  border-color: #9e1458;
+  background: #ffffff;
+  color: #9e1458;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(158, 20, 88, 0.15);
 }
 
 .styles-tab-btn.active {
   background: var(--color-gold, #D6AD55);
-  color: var(--color-plum, #290018);
+  color: #1e0513;
   font-weight: 700;
-  border-color: var(--color-gold, #D6AD55);
-  box-shadow: 0 4px 14px rgba(214, 173, 85, 0.35);
+  border-color: #c4993d;
+  box-shadow: 0 4px 14px rgba(214, 173, 85, 0.4);
 }
 
 .styles-search-box {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(214, 173, 85, 0.45);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid rgba(158, 20, 88, 0.25);
   border-radius: 999px;
   padding: 8px 18px;
   min-width: 280px;
   transition: all 0.2s ease;
-  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
 .styles-search-box:focus-within {
-  border-color: var(--color-gold, #D6AD55);
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 0 3px rgba(214, 173, 85, 0.25);
+  border-color: #9e1458;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(158, 20, 88, 0.18);
 }
 
 .styles-search-box input {
@@ -2713,35 +2822,37 @@ button {
   background: transparent;
   outline: none;
   font-size: 0.88rem;
-  color: #FFFFFF;
+  color: #2b081c;
   width: 100%;
 }
 
 .styles-search-box input::placeholder {
-  color: #dfd8dc;
+  color: #8c6876;
 }
 
 /* Breadcrumb navigation for Shop page */
 .page-shop .breadcrumb-nav {
-  background-color: var(--color-plum, #290018);
-  border-bottom: 1px solid rgba(214, 173, 85, 0.2);
+  background: #fdf6f5;
+  background: linear-gradient(135deg, #fdf6f5 0%, #faedea 100%);
+  border-bottom: 1px solid rgba(214, 173, 85, 0.28);
 }
 
 .page-shop .breadcrumb-item a {
-  color: #dfd8dc;
+  color: #7a5060;
+  font-weight: 500;
 }
 
 .page-shop .breadcrumb-item a:hover {
-  color: var(--color-gold, #D6AD55);
+  color: var(--color-primary);
 }
 
 .page-shop .breadcrumb-separator {
-  color: var(--color-gold, #D6AD55);
+  color: #caa1ad;
 }
 
 .page-shop .breadcrumb-item.active {
-  color: var(--color-gold, #D6AD55);
-  font-weight: 600;
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
 /* Styles 4-Column Grid (Image 2) */
@@ -2843,6 +2954,164 @@ button {
   background: var(--color-blush, #FFF9F2);
   color: var(--color-primary, #9E1458);
   border-color: var(--color-gold, #D6AD55);
+}
+
+/* =========================================================================
+   Our Collections Section & Reference Image 2 Style Cards
+   ========================================================================= */
+.our-collections-section {
+  background-color: #fbebee !important; /* Soft blush pink background as in Reference Image 2 */
+  padding: 60px 0 75px 0;
+}
+
+.our-collections-main-title {
+  font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+  font-size: 2.35rem;
+  font-weight: 600;
+  color: #1e1416;
+  text-align: center;
+  margin: 0 0 32px 0;
+  letter-spacing: -0.01em;
+}
+
+.our-collections-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Reference Image 2: Exact Card Style */
+.collection-style-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1.5px solid #d95368; /* Crisp reddish-coral border from Image 2 */
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(217, 83, 104, 0.08);
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.collection-style-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(217, 83, 104, 0.22);
+  border-color: #c72c48;
+}
+
+.collection-style-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #fdfafb;
+}
+
+.collection-style-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.collection-style-card:hover .collection-style-card-media img {
+  transform: scale(1.06);
+}
+
+.collection-style-card-footer {
+  background: #ffffff;
+  padding: 12px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  border-top: 1px solid rgba(217, 83, 104, 0.15);
+}
+
+.collection-style-card-title {
+  font-family: var(--font-body, 'Jost', -apple-system, BlinkMacSystemFont, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.collection-style-card:hover .collection-style-card-title {
+  color: #c72c48;
+}
+
+.collection-style-card-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.collection-style-card-price .price-current {
+  font-family: var(--font-body, 'Jost', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #9E1458;
+}
+
+.collection-style-card-price .price-original {
+  font-size: 0.8rem;
+  color: #888888;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .our-collections-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .our-collections-main-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-collections-section {
+    padding: 40px 0 50px 0;
+  }
+  .our-collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 10px;
+  }
+  .our-collections-main-title {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+  .collection-style-card {
+    border-radius: 10px;
+  }
+  .collection-style-card-footer {
+    padding: 10px 6px;
+    min-height: 42px;
+  }
+  .collection-style-card-title {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 8px;
+  }
+  .collection-style-card-title {
+    font-size: 0.8rem;
+  }
 }
 
 .category-pill-btn {
@@ -5314,50 +5583,54 @@ button {
    21. Wishlist Page Styles
    -------------------------------------------------------------------------- */
 .page-wishlist .page-hero-banner {
-  background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-burgundy) 100%);
+  background: #faedea;
+  background: linear-gradient(135deg, #fdf6f5 0%, #f7eae7 45%, #f1dbd7 100%);
   padding: 44px 0 36px;
   text-align: center;
-  border-bottom: 1px solid rgba(214, 173, 85, 0.35);
-  color: var(--color-white);
+  border-bottom: 2px solid var(--color-gold);
+  color: #2b081c;
 }
 
 .page-wishlist .page-hero-banner h1 {
-  color: var(--color-white);
+  color: #2b081c;
 }
 
 .page-wishlist .page-hero-banner p {
-  color: #dfd8dc;
+  color: #5f3f4c;
 }
 
 /* --------------------------------------------------------------------------
-   21b. About Us & Contact Us Pages - Luxury Dark Wine / Plum Theme
+   21b. About Us & Contact Us Pages - Light Luxury Blush Palette (Homepage Banner Theme)
    -------------------------------------------------------------------------- */
 .page-about .page-hero-banner,
 .page-contact .page-hero-banner {
-  background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-burgundy) 100%);
+  background: #faedea;
+  background: linear-gradient(135deg, #fdf6f5 0%, #f7eae7 45%, #f1dbd7 100%);
   padding: 48px 0 44px;
   text-align: center;
   border-bottom: 2px solid var(--color-gold);
-  color: var(--color-white);
+  color: #2b081c;
   position: relative;
 }
 
 .page-about .page-hero-banner .category-group-badge,
 .page-contact .page-hero-banner .category-group-badge {
-  background: rgba(214, 173, 85, 0.18);
-  color: var(--color-gold-light);
-  border: 1px solid var(--color-gold);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-primary);
+  border: 1px solid rgba(214, 173, 85, 0.6);
+  box-shadow: 0 2px 10px rgba(158, 20, 88, 0.08);
 }
 
 .page-about .page-hero-banner .page-hero-title,
 .page-contact .page-hero-banner .page-hero-title {
-  color: var(--color-white);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: #2b081c;
+  font-weight: 700;
+  text-shadow: none;
 }
 
 .page-about .page-hero-banner .page-hero-desc,
 .page-contact .page-hero-banner .page-hero-desc {
-  color: #dfd8dc;
+  color: #5f3f4c;
   max-width: 680px;
   margin-left: auto;
   margin-right: auto;
@@ -5366,29 +5639,31 @@ button {
 /* Breadcrumb navigation for About & Contact pages */
 .page-about .breadcrumb-nav,
 .page-contact .breadcrumb-nav {
-  background-color: var(--color-plum);
-  border-bottom: 1px solid rgba(214, 173, 85, 0.2);
+  background: #fdf6f5;
+  background: linear-gradient(135deg, #fdf6f5 0%, #faedea 100%);
+  border-bottom: 1px solid rgba(214, 173, 85, 0.28);
 }
 
 .page-about .breadcrumb-item a,
 .page-contact .breadcrumb-item a {
-  color: #dfd8dc;
+  color: #7a5060;
+  font-weight: 500;
 }
 
 .page-about .breadcrumb-item a:hover,
 .page-contact .breadcrumb-item a:hover {
-  color: var(--color-gold);
+  color: var(--color-primary);
 }
 
 .page-about .breadcrumb-separator,
 .page-contact .breadcrumb-separator {
-  color: var(--color-gold);
+  color: #caa1ad;
 }
 
 .page-about .breadcrumb-item.active,
 .page-contact .breadcrumb-item.active {
-  color: var(--color-gold);
-  font-weight: 600;
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
 .wishlist-section {

@@ -271,7 +271,7 @@
       category: '2-Piece Churidar Sets',
       categorySlug: '2-piece-churidar-sets',
       group: 'clothing',
-      sections: ['trending', 'clothing'],
+      sections: ['new-arrivals', 'trending', 'clothing'],
       price: 1299,
       originalPrice: 1999,
       discount: '35% OFF',
@@ -349,7 +349,7 @@
       category: 'Designer Lehengas',
       categorySlug: 'designer-lehengas',
       group: 'clothing',
-      sections: ['new-arrivals', 'best-sellers', 'clothing'],
+      sections: ['new-arrivals', 'trending', 'clothing'],
       price: 7999,
       originalPrice: 12999,
       discount: '38% OFF',
@@ -657,7 +657,7 @@
       category: 'Bracelets & Kadas',
       categorySlug: 'bracelets-kadas',
       group: 'anti-tarnish',
-      sections: ['anti-tarnish', 'best-sellers'],
+      sections: ['new-arrivals', 'anti-tarnish', 'best-sellers'],
       price: 1299,
       originalPrice: 1999,
       discount: '35% OFF',
@@ -1208,7 +1208,7 @@
       category: 'Premium Cord Sets',
       categorySlug: 'premium-cord-sets',
       group: 'clothing',
-      sections: ['clothing', 'trending'],
+      sections: ['new-arrivals', 'clothing', 'trending'],
       price: 1299,
       originalPrice: 2199,
       discount: '41% OFF',
@@ -1361,7 +1361,7 @@
       category: '299 Kurtis',
       categorySlug: '299-kurtis',
       group: 'clothing',
-      sections: ['clothing', 'offers'],
+      sections: ['new-arrivals', 'clothing', 'offers'],
       price: 299,
       originalPrice: 699,
       discount: '57% OFF',
@@ -1668,8 +1668,12 @@
         }
       }
 
-      // 2. Category slug filter
-      if (opts.categorySlug && opts.categorySlug !== 'all') {
+      // 2. Category slug filter / Section filter
+      if (opts.categorySlug === 'new-arrivals') {
+        results = results.filter(p => p.sections && p.sections.includes('new-arrivals'));
+      } else if (opts.categorySlug === 'trending' || opts.categorySlug === 'trending-now') {
+        results = results.filter(p => p.sections && p.sections.includes('trending'));
+      } else if (opts.categorySlug && opts.categorySlug !== 'all') {
         const normSlug = this.normalizeCategorySlug(opts.categorySlug);
         results = results.filter(p => p.categorySlug === normSlug);
       }
